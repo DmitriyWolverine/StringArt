@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-init-method="init" default-destroy-method="destroy">
+	
+		
+	<bean id="artist" class="by.sda.stringart.bean.artists.Artist">
+		
+	</bean>
+	
+	<bean id="order" class="by.sda.stringart.bean.orders.Order">
+		
+	</bean>
+
+	<bean id="stringPicture" class="by.sda.stringart.bean.pictures.StringPicture">
+		
+	</bean>
+	
+	<bean id="colourPicture" class="by.sda.stringart.bean.pictures.ColoutPicture">
+		
+	</bean>
+	
+	<bean id="admin" class="by.sda.stringart.bean.users.Admin">
+		
+	</bean>
+	
+	<bean id="user" class="by.sda.stringart.bean.users.User">
+		
+	</bean>
+	
+<!--  	<bean id="carService" class="by.htp.carparking.service.impl.CarServiceImpl">
+		<constructor-arg ref="carDBase" />
+	</bean>
+
+	<bean id="orderService" class="by.htp.carparking.service.impl.OrderServiceImpl">
+		
+	</bean>
+	
+	<bean id="show_cars" class="by.htp.carparking.commands.impl.ShowCarsList">
+		<constructor-arg ref="carService" />
+	</bean>-->
+</beans>
+
+

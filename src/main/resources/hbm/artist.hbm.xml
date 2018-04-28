@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="by.sda.stringart.bean.artists.Artist" table="artists">
+	
+		<id name="id" type="int">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+		
+		<property name="name" type="java.lang.String">
+			<column name="name" />		
+		</property>
+		
+		<property name="surname" type="java.lang.String">
+			<column name="surname" />		
+		</property>
+		
+		<property name="birthday" type="java.util.Date">
+			<column name="birthday" />		
+		</property>
+		
+		<property name="style" type="java.lang.String">
+			<column name="style" />		
+		</property>
+		
+	</class>
+</hibernate-mapping>
