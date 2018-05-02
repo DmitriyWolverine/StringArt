@@ -9,7 +9,6 @@ import by.sda.stringart.bean.artists.Artist;
 import by.sda.stringart.dao.ArtistDao;
 
 public class ArtistDaoHibernateImpl implements ArtistDao{
-	
 
 	@Override
 	public void create(Artist entity) {

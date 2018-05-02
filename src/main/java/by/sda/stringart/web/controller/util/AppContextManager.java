@@ -1,6 +1,6 @@
 package by.sda.stringart.web.controller.util;
 
-import org.springframework.context.ApplicationContext;
+/*import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 
 import by.sda.stringart.web.controller.MyServlet;
@@ -22,4 +22,4 @@ public class AppContextManager {
 		return appContext;
 	}
 	
-}
+}*/

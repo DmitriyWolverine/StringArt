@@ -19,9 +19,10 @@
 		</plugins>
 	</build>
   
-  	<properties>
+ <!--  	<properties>
 		 <spring-framework.version>4.3.15.RELEASE</spring-framework.version>
-	</properties>
+	</properties> 
+	-->
 	
   <dependencies>
 	<dependency>
@@ -55,6 +56,7 @@
 	    <version>4.3.11.Final</version>
 	</dependency>	
 	
+	<!-- 
 	<dependency>
 	    	<groupId>org.springframework</groupId>
 	      	<artifactId>spring-web</artifactId>
@@ -72,7 +74,8 @@
  		<groupId>org.apache.logging.log4j</groupId>
  		<artifactId>log4j-core</artifactId>
  		<version>2.11.0</version>
- 	 </dependency>
+ 	 </dependency> 
+ 	 -->
 	
   </dependencies>
   

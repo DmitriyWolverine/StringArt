@@ -6,7 +6,7 @@ import by.sda.stringart.commands.BaseCommand;
 import by.sda.stringart.service.ArtistService;
 import by.sda.stringart.service.impl.ArtistServiceImpl;
 import static by.sda.stringart.commands.util.JspParametresPool.ARTISTS_LIST;
-import static by.sda.stringart.commands.util.CommandsPool.SHOW_ARTISTS_LIST;;
+import static by.sda.stringart.web.controller.util.JspNames.ARTISTS_LIST_PAGE;
 
 
 public class ShowArtists implements BaseCommand{
@@ -25,7 +25,7 @@ public class ShowArtists implements BaseCommand{
 	@Override
 	public String doAction(HttpServletRequest request) {
 		request.setAttribute(ARTISTS_LIST, artistService.getAllArtists());
-		return SHOW_ARTISTS_LIST;
+		return ARTISTS_LIST_PAGE;
 	}
 
 }
