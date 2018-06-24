@@ -12,37 +12,25 @@
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
 	
-	<title>Registration Page</title>
+	<title>User page</title>
 	<style>
 	   body {
 	    background-image: url(images/registration.jpg); /* Путь к фоновому изображению */
-	    background-color: #c7b39b; /* Цвет фона */
+	    background-color: #696969; /* Цвет фона */
 	   }
   	</style>
+  	
 </head>
 <body>
 	
-	
-		<form class="form-horizontal" method = "post" action="registrate">
-		  <div class="form-group col-sm-2">
-		    <label class="control-label col-sm-2" for="login">Login:</label>
-		    <input type="text" class="form-control" id="login" placeholder="Enter login">
-		  </div>
-		   <div class="form-group col-sm-2">
-		    <label class="control-label col-sm-2" for="pwd">Password:</label>
-		    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-		  </div>
-		  
-		  <div class="form-group col-sm-2">
-		    <label class="control-label col-sm-2" for="email">Email:</label>
-		    <input type="email" class="form-control" id="email" placeholder="Enter email">
-		  </div>
-		  
-		  <div class="col-sm-2">
-			  <button type="submit" class="btn btn-default " value="registrate">Submit</button>
-		   </div>
-		</form>
-
+	<h1 align="center">Welcome!</h1>
+ 	
+	<div class="row">
+	  <div class="col-sm-5">.nothing</div>
+	  <div class="col-sm-5">.some text</div>
+	  <div class="col-sm-2">.nothing</div>
+	</div>
+		
 	
 	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 

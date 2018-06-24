@@ -1,9 +1,17 @@
 package by.sda.stringart.web.controller.util;
 
 public class JspPagesNames {
+	
 	public static final String SHOW_ARTISTS_PAGE 			= "show_artists";
 	public static final String SHOW_STYLES_PAGE 			= "show_styles";
 	public static final String REGISTRATION_PAGE 			= "registration";
-	public static final String AUTHENTICATION_PAGE 			= "log_in";
+	public static final String AUTHENTICATION_PAGE 			= "authentication";
+	public static final String NEWS_PAGE 					= "news";
+	public static final String ABOUT_US_PAGE 				= "aboutUs";
+	public static final String SERVICE_PAGE 				= "service";
+	public static final String USER_PAGE 					= "user";
 	
+	private JspPagesNames() {
+		super();
+	}
 }

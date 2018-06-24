@@ -14,7 +14,7 @@ import by.sda.stringart.service.impl.StyleServiceImpl;
 @RequestMapping("/styleList")
 public class ShowStyles {
 		   @RequestMapping(method = RequestMethod.GET)
-		   public String printHello(ModelMap model ) {
+		   public String changePage(ModelMap model ) {
 		      model.addAttribute(STYLES_LIST, new StyleServiceImpl().getAll());
 		      return "stylesList";
 		   }

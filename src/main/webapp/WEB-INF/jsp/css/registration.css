@@ -1,4 +1,17 @@
 body{
-	background-image:url(../images/registration.jpg);
-	background-color: #c7b39b;
+	background-image:url(../images/main.jpg);
+}
+#first{
+	margin-top:150px;
+}
+h1{
+	text-align:center;
+	font:42px Verdan;
+	text-align:center;
+}
+p,label,input{
+	font:20 Tahoe;
+}
+form{
+	text-align:center;
 }

@@ -12,18 +12,18 @@
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
 	
-	<title>Registration Page</title>
+	<title>Authentication Page</title>
 	<style>
 	   body {
 	    background-image: url(images/registration.jpg); /* Путь к фоновому изображению */
-	    background-color: #c7b39b; /* Цвет фона */
+	    background-color: #32329b; /* Цвет фона */
 	   }
   	</style>
+  	
 </head>
 <body>
 	
-	
-		<form class="form-horizontal" method = "post" action="registrate">
+		<form class="form-horizontal" action="/action_page.php">
 		  <div class="form-group col-sm-2">
 		    <label class="control-label col-sm-2" for="login">Login:</label>
 		    <input type="text" class="form-control" id="login" placeholder="Enter login">
@@ -33,13 +33,8 @@
 		    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
 		  </div>
 		  
-		  <div class="form-group col-sm-2">
-		    <label class="control-label col-sm-2" for="email">Email:</label>
-		    <input type="email" class="form-control" id="email" placeholder="Enter email">
-		  </div>
-		  
 		  <div class="col-sm-2">
-			  <button type="submit" class="btn btn-default " value="registrate">Submit</button>
+			  <button type="submit" class="btn btn-default ">Log in</button>
 		   </div>
 		</form>
 

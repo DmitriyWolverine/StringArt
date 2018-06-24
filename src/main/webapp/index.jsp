@@ -43,17 +43,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
           		<li class="nav-item">
-                    <a class="nav-link link text-black display-4" href="https://mobirise.com">News</a>
+                     <form method="post" action="to_news">
+		               	<button class="btn btn-md btn-secondary-outline display-4" type="hidden"  value="to_news">
+		               		News
+		               	</button>
+					</form>
                 </li>
                 <li class="nav-item">
-                	<a class="nav-link link text-black display-4" href="https://mobirise.com">
-                		Service&nbsp;
-                	</a>
+                	<form method="post" action="to_service">
+		               	<button class="btn btn-md btn-secondary-outline display-4" type="hidden"  value="to_service">
+		               		Service
+		               	</button>
+					</form>
                 </li>
                 <li class="nav-item">
-                	<a class="nav-link link text-black display-4" href="https://mobirise.com">
-                		About Us
-                	</a>
+                	<form method="post" action="to_about_us">
+		               	<button class="btn btn-md btn-secondary-outline display-4" type="hidden"  value="to_about_us">
+		               		About Us
+		               	</button>
+					</form>
                 </li>
             </ul>
             <div class="navbar-buttons mbr-section-btn">
@@ -85,13 +93,6 @@
                 
                 <div class="mbr-section-btn align-center">
                 
-                	
-	                <form  method="post" action="show_artists" >
-		               	<button class="btn btn-md btn-info-outline display-4" type="hidden" value="show_artists">
-		               		Show artists
-		               	</button>
-					</form>
-					
 					<form method="post" action="to_authentication">
 		               	<button class="btn btn-md btn-info-outline display-4" type="hidden" value="to_authentication">
 		               		Log In
@@ -103,10 +104,7 @@
 		               		Sign Up
 		               	</button>
 					</form>
-					
-               		<a class="btn btn-md btn-info-outline display-4" href="https://mobirise.com">Log In</a>
-                    <a class="btn btn-md btn-secondary-outline display-4" href="https://mobirise.com">Sign Up</a>
-                    
+				
                 </div>
            	</div>
            		
@@ -117,7 +115,7 @@
     </div>
 </section>
 
-<section once="" class="cid-qQVMcuHJM1" id="footer6-u">
+<section class="cid-qQVMcuHJM1" id="footer6-u">
 
     
 
