@@ -3,8 +3,17 @@ package by.sda.stringart.bean.users;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+import org.springframework.stereotype.Component;
+
 import by.sda.stringart.bean.orders.Order;
 
+@Component
+@Entity
+@Table(name = "users")
 public class Admin extends User{
 	/**
 	 * Auto generated serial version id
@@ -42,35 +51,12 @@ public class Admin extends User{
 		this.users = users;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = super.hashCode();
-		result = prime * result + ((users == null) ? 0 : users.hashCode());
-		return result;
-	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (!super.equals(obj))
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Admin other = (Admin) obj;
-		if (users == null) {
-			if (other.users != null)
-				return false;
-		} else if (!users.equals(other.users))
-			return false;
-		return true;
-	}
 
 	@Override
 	public String toString() {
-		return "Admin ID ="+ getId() +"users=" + users + ", getLogin()=" + getLogin() + ", getPass()=" + getPass() + ", getEmail()="
-				+ getEmail() + ", getOrders()=" + getOrders() ;
+		return "Admin ID = "+ getId() +"users = " + users + ", getLogin() = " + getLogin() + ", getPass() = " + getPass() + ", getEmail() = "
+				+ getEmail() + ", getOrders() = " + getOrders() ;
 	}
 	
 

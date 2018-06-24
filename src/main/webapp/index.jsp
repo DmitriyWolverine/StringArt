@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -26,42 +28,51 @@
 <body>
   <section class="menu cid-qQBWg77Svs" once="menu" id="menu2-l">
 
-    
-
     <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
         <div class="menu-logo">
-            <div class="navbar-brand">
-                
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-info display-4" href="https://mobirise.com"><span class="mbrib-change-style mbr-iconfont mbr-iconfont-btn"></span>
-                        Anthony Shad</a></span>
+            <div class="navbar-brand"> 
+                <span class="navbar-caption-wrap">
+                <!-- может ещё тоже переделать через сервлет ? -->
+                	<a class="navbar-caption text-black display-4" href="https://instagram.com/shad.anthony">
+                		<span class="mbrib-change-style mbr-iconfont mbr-iconfont-btn"></span>
+                        	Anthony Shad
+                    </a>
+                </span>
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+          		<li class="nav-item">
                     <a class="nav-link link text-black display-4" href="https://mobirise.com">News</a>
-                </li><li class="nav-item"><a class="nav-link link text-black display-4" href="https://mobirise.com">Service&nbsp;</a></li><li class="nav-item"><a class="nav-link link text-black display-4" href="https://mobirise.com">About Us</a></li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="tel:+1-234-567-8901">
-                    <span class="btn-icon mbri-mobile mbr-iconfont mbr-iconfont-btn">
-                    </span>
-                    +7-916-307-00-61</a></div>
+                </li>
+                <li class="nav-item">
+                	<a class="nav-link link text-black display-4" href="https://mobirise.com">
+                		Service&nbsp;
+                	</a>
+                </li>
+                <li class="nav-item">
+                	<a class="nav-link link text-black display-4" href="https://mobirise.com">
+                		About Us
+                	</a>
+                </li>
+            </ul>
+            <div class="navbar-buttons mbr-section-btn">
+	            <a class="btn btn-sm btn-black-outline display-4" href="tel:+1-234-567-8901">
+	                <span class="btn-icon mbri-mobile mbr-iconfont mbr-iconfont-btn"></span>
+	                +7-916-307-00-61
+	            </a>
+            </div>
         </div>
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobirise.me/g">how to build a website for free</a></section><section class="header4 cid-qQBUaa6gmL mbr-parallax-background" id="header4-j">
+<section class="engine">
+	<a href="https://mobirise.me/q">
+		free responsive site templates
+	</a>
+</section>
 
-    
-
-    
-
+<section class="header4 cid-qQBUaa6gmL mbr-parallax-background" id="header4-j">
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="media-content col-md-10">
@@ -71,9 +82,34 @@
                     <p class="mbr-text mbr-fonts-style display-5">
                         We are happy to introduce you some great works of one modern artist from Eastern Europe. Here you can see some interesting picures in different &nbsp;modern art directions. You can find describtions of some art-entities and do it by yourself</p>
                 </div>
-                <div class="mbr-section-btn align-center"><a class="btn btn-md btn-info-outline display-4" href="https://mobirise.com">Log In</a>
-                    <a class="btn btn-md btn-secondary-outline display-4" href="https://mobirise.com">Sign Up</a></div>
-            </div>
+                
+                <div class="mbr-section-btn align-center">
+                
+                	
+	                <form  method="post" action="show_artists" >
+		               	<button class="btn btn-md btn-info-outline display-4" type="hidden" value="show_artists">
+		               		Show artists
+		               	</button>
+					</form>
+					
+					<form method="post" action="to_authentication">
+		               	<button class="btn btn-md btn-info-outline display-4" type="hidden" value="to_authentication">
+		               		Log In
+		               	</button>
+					</form>
+					
+					 <form method="post" action="to_registration">
+		               	<button class="btn btn-md btn-secondary-outline display-4" type="hidden"  value="to_registration">
+		               		Sign Up
+		               	</button>
+					</form>
+					
+               		<a class="btn btn-md btn-info-outline display-4" href="https://mobirise.com">Log In</a>
+                    <a class="btn btn-md btn-secondary-outline display-4" href="https://mobirise.com">Sign Up</a>
+                    
+                </div>
+           	</div>
+           		
             <div class="mbr-figure pt-5">
                 <img src="assets/images/leps-700x700.jpg" alt="Mobirise" title="" style="width: 80%;">
             </div>

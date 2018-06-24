@@ -2,6 +2,7 @@
 <!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
+
 	<session-factory>
 		<property name="hibernate.dialect">
 			org.hibernate.dialect.MySQLDialect
@@ -13,6 +14,7 @@
 	
 		<property name="hibernate.connection.url">
 			jdbc:mysql://localhost/art_gallery?useTimezone=true&amp;serverTimezone=UTC
+			
 		</property>
 		
 		<property name="hibernate.connection.username">
@@ -23,8 +25,16 @@
 			root
 		</property>
 		
-		<mapping resource="hbm/artist.hbm.xml"/>
+		<!--  <property name="show_sql">true</property> -->
+		<!--  очень плохо, надо изменить на нормальный метод ленивой загрузки, а не это -->
+		<property name="hibernate.enable_lazy_load_no_trans">true</property>
+		
+		<mapping class="by.sda.stringart.bean.util.Style"></mapping>
+		<mapping class="by.sda.stringart.bean.artists.Artist"></mapping>
+		<mapping class="by.sda.stringart.bean.pictures.Picture"></mapping>
+		<mapping class="by.sda.stringart.bean.standarts.Standart"></mapping>
+		<mapping class="by.sda.stringart.bean.users.User"></mapping>
+		<mapping class="by.sda.stringart.bean.orders.Order"></mapping>
 		
 	</session-factory>
-
 </hibernate-configuration>

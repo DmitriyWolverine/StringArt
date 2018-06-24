@@ -1,45 +1,77 @@
 package by.sda.stringart.bean.orders;
 
+import java.io.Serializable;
 import java.util.Date;
 
-import by.sda.stringart.bean.Entity;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-public class Order extends Entity{
+import org.springframework.stereotype.Component;
+
+import by.sda.stringart.bean.users.User;
+
+@Component
+@Entity
+@Table(name = "orders")
+public class Order implements Serializable{
 	
 	/**
 	 * Auto generated Serial version Id
 	 */
 	private static final long serialVersionUID = 3230322455892179380L;
+	@Id 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	@Column(name = "name")
 	private String name;
-	private String describtion;
+	@Column(name = "get_date")
 	private Date appliedDate;
+	@Column(name = "done_date")
 	private Date deadLineDate;
+	@Column(name = "status")
 	private String status;
+	
+	@ManyToOne
+	@JoinColumn(name = "client_id")
+	private User user;
+	
 	
 	public Order() {
 		super();
 	}
 
 	public Order(int id) {
-		super(id);
+		this.id = id;
 	}
 
-	public Order(String name, String describtion, Date appliedDate, Date deadLineDate, String status) {
+	public Order(String name, Date appliedDate, Date deadLineDate, String status) {
 		super();
 		this.name = name;
-		this.describtion = describtion;
 		this.appliedDate = appliedDate;
 		this.deadLineDate = deadLineDate;
 		this.status = status;
 	}
 
-	public Order(int id, String name, String describtion, Date appliedDate, Date deadLineDate, String status) {
-		super(id);
+	public Order(int id, String name,Date appliedDate, Date deadLineDate, String status) {
+		this.id = id;
 		this.name = name;
-		this.describtion = describtion;
 		this.appliedDate = appliedDate;
 		this.deadLineDate = deadLineDate;
 		this.status = status;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -48,14 +80,6 @@ public class Order extends Entity{
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getDescribtion() {
-		return describtion;
-	}
-
-	public void setDescribtion(String describtion) {
-		this.describtion = describtion;
 	}
 
 	public Date getAppliedDate() {
@@ -85,10 +109,10 @@ public class Order extends Entity{
 	@Override
 	public int hashCode() {
 		final int prime = 31;
-		int result = super.hashCode();
+		int result = 1;
 		result = prime * result + ((appliedDate == null) ? 0 : appliedDate.hashCode());
 		result = prime * result + ((deadLineDate == null) ? 0 : deadLineDate.hashCode());
-		result = prime * result + ((describtion == null) ? 0 : describtion.hashCode());
+		result = prime * result + id;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		return result;
@@ -98,7 +122,7 @@ public class Order extends Entity{
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (!super.equals(obj))
+		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
@@ -113,10 +137,7 @@ public class Order extends Entity{
 				return false;
 		} else if (!deadLineDate.equals(other.deadLineDate))
 			return false;
-		if (describtion == null) {
-			if (other.describtion != null)
-				return false;
-		} else if (!describtion.equals(other.describtion))
+		if (id != other.id)
 			return false;
 		if (name == null) {
 			if (other.name != null)
@@ -133,8 +154,8 @@ public class Order extends Entity{
 
 	@Override
 	public String toString() {
-		return "Order Id="+ getId() +" name=" + name + ", describtion=" + describtion + ", appliedDate=" + appliedDate
-				+ ", deadLineDate=" + deadLineDate + ", status=" + status;
+		return "Order Id = "+ id +" name = " + name +  ", appliedDate = " + appliedDate
+				+ ", deadLineDate = " + deadLineDate + ", status = " + status;
 	}
 	
 

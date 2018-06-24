@@ -2,9 +2,7 @@ package by.sda.stringart.dao;
 
 import java.util.List;
 
-import by.sda.stringart.bean.Entity;
-
-public interface BaseDao <T extends Entity> {
+public interface BaseDao <T> {
 	void create(T entity);
 	T read(int id);
 	void update(T entity);

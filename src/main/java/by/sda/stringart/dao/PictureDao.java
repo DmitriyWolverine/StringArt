@@ -1,7 +1,7 @@
 package by.sda.stringart.dao;
 
-import by.sda.stringart.bean.pictures.AbstractPicture;
+import by.sda.stringart.bean.pictures.Picture;
 
-public interface PictureDao extends BaseDao<AbstractPicture>{
+public interface PictureDao extends BaseDao<Picture>{
 
 }
