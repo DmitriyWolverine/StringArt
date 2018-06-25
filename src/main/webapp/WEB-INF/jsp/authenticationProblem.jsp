@@ -12,18 +12,17 @@
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
 	
-	<title>User page</title>
+	<title>Authentication problem</title>
 	<style>
 	   body {
-	    background-image: url(images/registration.jpg); /* Путь к фоновому изображению */
-	    background-color: #696969; /* Цвет фона */
+	    background-color: #00FFFF; /* Цвет фона */
 	   }
   	</style>
   	
 </head>
 <body>
 	
-	<h1 align="center">Welcome, ${login}!</h1>
+	<h1 align="center">Wrong login or password!</h1>
  	
 	<div class="row">
 	  <div class="col-sm-5">.nothing</div>

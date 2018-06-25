@@ -7,41 +7,43 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/registration.css" type="text/css" >
+	
+	<link href="<c:url value="/resources/css/registration.css" />" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
 	
 	<title>Registration Page</title>
-	<style>
-	   body {
-	    background-image: url(images/registration.jpg); /* Путь к фоновому изображению */
-	    background-color: #c7b39b; /* Цвет фона */
-	   }
-  	</style>
+	
 </head>
 <body>
+		<div class="row">
+		  <div class="col-sm-8"></div>
+		  <div class="col-sm-4">
+			<form class="form-horizontal" method = "post" action="registrate">
+				  <div class="form-group col-sm-5">
+				    <label class="control-label col-sm-2" for="login">Login:</label>
+				    <input type="text" class="form-control" id="login" name="login" placeholder="Enter login">
+				  </div>
+				  
+				   <div class="form-group col-sm-5">
+				    <label class="control-label col-sm-2" for="pwd">Password:</label>
+				    <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter password">
+				  </div>
+				  
+				  <div class="form-group col-sm-5">
+				    <label class="control-label col-sm-2" for="email">Email:</label>
+				    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+				  </div>
+				  
+				  <div class="col-sm-2">
+					  <button type="submit" class="btn btn-default " value="registrate">Submit</button>
+				   </div>
+			</form>
+		</div>
+	</div>
 	
-	
-		<form class="form-horizontal" method = "post" action="registrate">
-		  <div class="form-group col-sm-2">
-		    <label class="control-label col-sm-2" for="login">Login:</label>
-		    <input type="text" class="form-control" id="login" placeholder="Enter login">
-		  </div>
-		   <div class="form-group col-sm-2">
-		    <label class="control-label col-sm-2" for="pwd">Password:</label>
-		    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-		  </div>
-		  
-		  <div class="form-group col-sm-2">
-		    <label class="control-label col-sm-2" for="email">Email:</label>
-		    <input type="email" class="form-control" id="email" placeholder="Enter email">
-		  </div>
-		  
-		  <div class="col-sm-2">
-			  <button type="submit" class="btn btn-default " value="registrate">Submit</button>
-		   </div>
-		</form>
+		
 
 	
 	<script 

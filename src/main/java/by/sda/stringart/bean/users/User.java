@@ -65,6 +65,14 @@ public class User implements Serializable{
 		this.login = login;
 		this.pass = pass;
 	}
+	
+	public User(String login, String email, String pass) {
+		super();
+		this.login = login;
+		this.email = email;
+		this.pass = pass;
+	}
+	
 	public User(String login, String pass, String email, List<Order> orders) {
 		super();
 		this.login = login;

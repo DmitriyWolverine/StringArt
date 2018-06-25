@@ -25,6 +25,16 @@ public class UserDaoHibernateImpl implements UserDao{
 		session.getTransaction().commit();
 		session.close();
 	}
+	
+	
+	@Override
+	public void create(String login, String email, String password) {
+		Session session = SessionFactoryManager.getSessionFactory().openSession();
+		session.beginTransaction();
+		session.save(new User(login, email, password));
+		session.getTransaction().commit();
+		session.close();
+	}
 
 	@Override
 	public User read(int id) {
@@ -59,5 +69,7 @@ public class UserDaoHibernateImpl implements UserDao{
 		session.close();
 		return users;
 	}
+
+
 
 }

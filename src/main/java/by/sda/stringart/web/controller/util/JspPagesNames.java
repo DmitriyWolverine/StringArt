@@ -10,6 +10,7 @@ public class JspPagesNames {
 	public static final String ABOUT_US_PAGE 				= "aboutUs";
 	public static final String SERVICE_PAGE 				= "service";
 	public static final String USER_PAGE 					= "user";
+	public static final String REGISTRATION_FAILED_PAGE 	= "registrationProblem";
 	
 	private JspPagesNames() {
 		super();

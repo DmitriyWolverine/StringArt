@@ -11,6 +11,8 @@ import by.sda.stringart.service.impl.ArtistServiceImpl;
 
 @Controller
 public class ShowArtists {
+	
+	
 	 @RequestMapping(value = "/show_artists", method = RequestMethod.POST)
 	   public String printArtist(ModelMap model ) {
 	      model.addAttribute(ARTISTS_LIST, new ArtistServiceImpl().getAll());

@@ -18,7 +18,6 @@ public class UserServiceImpl implements UserService{
 	@Qualifier("userDaoHibernateImpl")
 	private UserDao userDao;
 	
-	
 
 	public UserServiceImpl() {
 		super();
@@ -33,6 +32,11 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public void create(User user) {
 		userDao.create(user);
+	}
+	
+	@Override
+	public void create(String login, String email, String password) {
+		userDao.create(login, email, password);
 	}
 
 	@Override

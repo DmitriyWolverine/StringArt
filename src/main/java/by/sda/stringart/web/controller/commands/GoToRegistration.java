@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/to_registration")
 public class GoToRegistration {
+	
 	 @RequestMapping(method = RequestMethod.POST)
 	 public String changePage(ModelMap model ) {
 		    return REGISTRATION_PAGE;
