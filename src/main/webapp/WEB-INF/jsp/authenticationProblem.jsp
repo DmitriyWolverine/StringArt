@@ -13,11 +13,6 @@
 		crossorigin="anonymous">
 	
 	<title>Authentication problem</title>
-	<style>
-	   body {
-	    background-color: #00FFFF; /* Цвет фона */
-	   }
-  	</style>
   	
 </head>
 <body>

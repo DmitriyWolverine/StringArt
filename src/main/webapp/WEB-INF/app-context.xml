@@ -11,17 +11,12 @@
 	default-init-method="init" default-destroy-method="destroy"
 	default-lazy-init="true">
 	
-<!--	<context:annotation-config/>
+	<context:annotation-config/>
 
-<import resource="/context/dao-context.xml"/>
+	<import resource="/context/dao-context.xml"/>
 	<import resource="/context/bean-context.xml"/>
 	<import resource="/context/service-context.xml"/>
--->	
-	
- 	<context:component-scan base-package="by.htp.stringart" />  	
-	
-	
-	
+
 </beans>
 
 

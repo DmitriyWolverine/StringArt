@@ -1,7 +1,8 @@
 package by.sda.stringart.web.controller.commands;
 
 import static by.sda.stringart.web.controller.util.JspPagesNames.*;
-import static by.sda.stringart.web.controller.util.JspParametresPool.*;
+import static by.sda.stringart.web.controller.util.JspPagesNames.USER_PAGE;
+import static by.sda.stringart.web.controller.util.JspParametresPool.USER_LOGIN;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -13,34 +14,37 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import by.sda.stringart.bean.users.User;
 import by.sda.stringart.service.UserService;
+import by.sda.stringart.service.impl.UserServiceImpl;
+
 
 @Controller
-@RequestMapping("/registrate")
-public class RegistrateUser {
+@RequestMapping("/authenticate")
+public class AuthenticateUser {
 	
 	@Autowired
 	@Qualifier("userServiceImpl")
 	private UserService userService;
 	
-	public RegistrateUser() {
+	public AuthenticateUser() {
 		super();
+		userService = new UserServiceImpl();
 	}
-	
-	public RegistrateUser(UserService userService) {
+
+	public AuthenticateUser(UserService userService) {
 		super();
 		this.userService = userService;
 	}
-	
+
 	@RequestMapping(method = RequestMethod.POST)
-	public String doAction(ModelMap model, @RequestParam String login, @RequestParam String email, @RequestParam String password) {
+	public String authentication(ModelMap model, @RequestParam String login,  @RequestParam String password) {
 		for(User user: userService.getAll()) {
-	    	  if( login.equals(user.getLogin()) || email.equals(user.getEmail()) ) {
-	    		 return REGISTRATION_FAILED_PAGE;
+	    	  if( login.equals(user.getLogin()) && password.equals(user.getPass()) ) {
+	    		 model.addAttribute(USER_LOGIN,login);
+	    		 return USER_PAGE;
 	    	  }
 	    }
-		userService.create(login, email, password);
 		model.addAttribute(USER_LOGIN,login);
-		return USER_PAGE;
+		return AUTHENTICATION_FAILED_PAGE;
 	}
-	
 }
+
