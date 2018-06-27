@@ -38,13 +38,17 @@ public class AuthenticateUser {
 	@RequestMapping(method = RequestMethod.POST)
 	public String authentication(ModelMap model, @RequestParam String login,  @RequestParam String password) {
 		for(User user: userService.getAll()) {
-	    	  if( login.equals(user.getLogin()) && password.equals(user.getPass()) ) {
+	    	  if( validateParams(user, login, password) ) {
 	    		 model.addAttribute(USER_LOGIN,login);
 	    		 return USER_PAGE;
 	    	  }
 	    }
 		model.addAttribute(USER_LOGIN,login);
 		return AUTHENTICATION_FAILED_PAGE;
+	}
+	
+	public boolean validateParams(User user, String login,  String password) {
+		return login.equals(user.getLogin()) && password.equals(user.getPass()) ;
 	}
 }
 

@@ -27,7 +27,7 @@
 	<div class="row">
 	  <div class="col-sm-5">.nothing</div>
 	  <div class="col-sm-5">.some text</div>
-	  <div class="col-sm-2">.nothing</div>
+	  <div class="col-sm-1">.nothing</div>
 	</div>
 	
 	

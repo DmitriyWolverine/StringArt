@@ -14,11 +14,12 @@
 		crossorigin="anonymous">
 	
 	<title>Authentication Page</title>
-  	
+	
 </head>
 
 <body>
-	
+
+
 		<form class="form-horizontal" method = "post" action="authenticate">
 		  <div class="form-group col-sm-2">
 		    <label class="control-label col-sm-2" for="login">Login:</label>
@@ -33,9 +34,8 @@
 			  <button type="submit" class="btn btn-default ">Log in</button>
 		   </div>
 		</form>
-
-	
-	<script 
+		
+		<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
 		crossorigin="anonymous">

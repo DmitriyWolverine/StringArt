@@ -18,8 +18,8 @@
 </head>
 <body>
 		<div class="row">
-		  <div class="col-sm-8"></div>
-		  <div class="col-sm-4">
+		  <div class="col-lg-8"></div>
+		  <div class="col-lg-4">
 			<form class="form-horizontal" method = "post" action="registrate">
 				  <div class="form-group col-sm-5">
 				    <label class="control-label col-sm-2" for="login">Login:</label>
