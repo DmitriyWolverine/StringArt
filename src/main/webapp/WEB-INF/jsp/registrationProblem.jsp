@@ -7,17 +7,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/registration.css" type="text/css" >
+	<link href="<c:url value="/resources/css/regProblem.css" />" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
 	
 	<title>Registration problem</title>
-	<style>
-	   body {
-	    background-color: #00FFFF; /* Цвет фона */
-	   }
-  	</style>
+
   	
 </head>
 <body>

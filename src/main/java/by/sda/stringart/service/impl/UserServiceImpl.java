@@ -58,4 +58,18 @@ public class UserServiceImpl implements UserService{
 	public List<User> getAll() {
 		return userDao.readAll();
 	}
+
+	@Override
+	public boolean validateUser(String login, String password) {
+		for(User user: userDao.readAll()) {
+	    	  if( validateParams(user, login, password) ) {
+	    		 return true;
+	    	  }
+	    }
+		return false;
+	}
+	
+	private boolean validateParams(User user, String login,  String password) {
+		return login.equals(user.getLogin()) && password.equals(user.getPass()) ;
+	}
 }

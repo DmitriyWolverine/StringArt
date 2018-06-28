@@ -40,6 +40,10 @@ public class User implements Serializable{
 	private String pass;
 	@Column(name = "email")
 	private String email;
+	@Column(name = "role")
+	private int role;
+	@Column(name = "active")
+	private int activity;
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Order> orders;
@@ -105,6 +109,21 @@ public class User implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	
+	
+	public int getRole() {
+		return role;
+	}
+	public void setRole(int role) {
+		this.role = role;
+	}
+	public int getActivity() {
+		return activity;
+	}
+	public void setActivity(int activity) {
+		this.activity = activity;
+	}
 	public List<Order> getOrders() {
 		return orders;
 	}
@@ -117,7 +136,7 @@ public class User implements Serializable{
 	public void setPictures(List<Picture> pictures) {
 		this.pictures = pictures;
 	}
-	
+		
 	@Override
 	public int hashCode() {
 		final int prime = 31;

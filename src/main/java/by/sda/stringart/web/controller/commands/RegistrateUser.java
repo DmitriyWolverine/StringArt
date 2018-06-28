@@ -32,7 +32,7 @@ public class RegistrateUser {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String doAction(ModelMap model, @RequestParam String login, @RequestParam String email, @RequestParam String password) {
+	public String doAction(ModelMap model, @RequestParam String login, @RequestParam String password, @RequestParam String email) {
 		for(User user: userService.getAll()) {
 	    	  if( login.equals(user.getLogin()) || email.equals(user.getEmail()) ) {
 	    		 return REGISTRATION_FAILED_PAGE;
