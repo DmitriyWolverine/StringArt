@@ -17,6 +17,7 @@ public class CommandsPool {
 	public static final String DELETE_ARTIST 				= "delete_artist";
 	public static final String UPDATE_ARTIST 				= "update_artist";
 	public static final String SHOW_STYLES_LIST 			= "show_styles";
+	public static final String LOG_OUT  					= "log_out";
 	
 	
 	private CommandsPool() {}

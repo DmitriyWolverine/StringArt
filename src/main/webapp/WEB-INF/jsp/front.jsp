@@ -101,8 +101,6 @@
  		 <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
 	</footer>
 	
-	
-
 	 </div>
   
   	<script 

@@ -16,15 +16,21 @@
 	
 </head>
 <body>
-	
+<div class="container">	
 	<h1 align="center">Welcome, ${login}!</h1>
- 	
+	
 	<div class="row">
-	  <div class="col-sm-5">nothing</div>
+	  <div class="col-sm-6">nothing</div>
 	  <div class="col-sm-5">some text</div>
-	  <div class="col-sm-2">nothing</div>
+	  <div class="col-sm-1">
+	   <form method="post" action="log_out">
+	 	<button class="btn btn-md  btn-info btn-info-outline display-4" value="log_out">
+			Log Out
+		</button>
+	</form>
+		</div>
 	</div>
-		
+</div>		
 	
 	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 

@@ -17,9 +17,10 @@
 	
 </head>
 <body>
+<div class="container">
 		<div class="row">
-		  <div class="col-lg-8"></div>
-		  <div class="col-lg-4">
+		  <div class="col-lg-5"></div>
+		  <div class="col-lg-5">
 			<form class="form-horizontal" method = "post" action="registrate">
 				  <div class="form-group col-sm-5">
 				    <label class="control-label col-sm-2" for="login">Login:</label>
@@ -44,7 +45,7 @@
 	</div>
 	
 		
-
+</div>
 	
 	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 

@@ -26,9 +26,9 @@ public class PassHashingAspect {
 	
 	@Around(value = "execution(*  by.sda.stringart.service.impl.UserServiceImpl.validateUser(..))")
 	public Object checkPassAdvice(ProceedingJoinPoint pjp) throws Throwable {
-		String input = (String) pjp.getArgs()[1];
+		String pass = (String) pjp.getArgs()[1];
 		SHA3.DigestSHA3 digestSHA3 = new SHA3.Digest512();
-	    byte[] digest = digestSHA3.digest(input.getBytes());
+	    byte[] digest = digestSHA3.digest(pass.getBytes());
 	    StringBuilder builder = new StringBuilder();
 	    for( int i = 0 ; i < digest.length; ++i) {
 	    	builder.append( Integer.toString(digest[i] & 0xff,16) );
