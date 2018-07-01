@@ -7,13 +7,20 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<link href="<c:url value="/WEB-INF/resources/css/index.css" />" rel="stylesheet">
+	<link href="<c:url value="/css/index.css" />" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
   	<title>Home</title>
- 	
+ 	<style type="text/css">
+	   #footer {
+	    position: fixed; /* Фиксированное положение */
+	    text-align: center;
+	   	bottom: 0; /* Левый нижний угол */
+	    padding: 10px; /* Поля вокруг текста */
+	    width: 70%; /* Ширина слоя */
+	   }
+	  </style>
 </head>
 
 <body>
@@ -97,13 +104,13 @@
 	    </div>
 	</section>
 	
-	<footer class="container-fluid bg-4 text-center">
- 		 <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
-	</footer>
-	
-	
+	<div id="footer" >
+		  <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
+	</div>
 
-	 </div>
+	
+	
+ </div>
   
   	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 

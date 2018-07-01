@@ -17,15 +17,38 @@
   	
 </head>
 <body>
-	
-	<h1 align="center">NEWS</h1>
- 	
-	<div class="row">
-	  <div class="col-sm-5">.nothing</div>
-	  <div class="col-sm-5">.some text</div>
-	  <div class="col-sm-2">.nothing</div>
+<div class="container" id="myNewsColor">
+		<h1 align="center" >NEWS</h1>
+	 <div class="row">
+	  <div class="col-md-4">
+	    <div class="thumbnail">
+	        <img src="/resources/images/egor.jpg" alt="Egor" width="300" height="200">
+	        <div class="caption">
+	          <p>Lorem ipsum...</p>
+	        </div>
+	    </div>
+	  </div>
+	  <div class="col-md-4">
+	    <div class="thumbnail">
+	        <img src="/resources/images/leps.jpg" alt="Leps" width="300" height="200">
+	        <div class="caption">
+	          <p>Lorem ipsum...</p>
+	        </div>
+	    </div>
+	  </div>
+	  <div class="col-md-4">
+	    <div class="thumbnail">
+	        <img src="/resources/images/nikulin.jpg" alt="Nikulin" width="300" height="200">
+	        <div class="caption">
+	            <p>Lorem ipsum...</p>
+	        </div>
+	    </div>
+	  </div>
 	</div>
-		
+	<div id="footer" >
+		  <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
+	</div>
+</div>		
 	
 	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 

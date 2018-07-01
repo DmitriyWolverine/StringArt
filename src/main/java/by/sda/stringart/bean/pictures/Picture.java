@@ -95,9 +95,10 @@ public class Picture implements Serializable{
 	public Artist getArtist() {
 		return artist;
 	}
-	public void setAuthor(Artist artist) {
+	public void setArtist(Artist artist) {
 		this.artist = artist;
 	}
+	
 	public BigDecimal getPrice() {
 		return price;
 	}
@@ -111,9 +112,7 @@ public class Picture implements Serializable{
 	public void setStyle(Style style) {
 		this.style = style;
 	}
-	public void setArtist(Artist artist) {
-		this.artist = artist;
-	}
+
 	public List<User> getUsers() {
 		return users;
 	}

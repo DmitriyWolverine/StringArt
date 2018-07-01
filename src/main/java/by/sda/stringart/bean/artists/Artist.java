@@ -40,7 +40,6 @@ public class Artist implements Serializable{
 	@Column(name = "birthday")
 	private Date birthday;
 	
-
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name = "style_id")
 	private Style style;
@@ -159,11 +158,6 @@ public class Artist implements Serializable{
 			if (other.name != null)
 				return false;
 		} else if (!name.equals(other.name))
-			return false;
-		if (style == null) {
-			if (other.style != null)
-				return false;
-		} else if (!style.equals(other.style))
 			return false;
 		if (surname == null) {
 			if (other.surname != null)

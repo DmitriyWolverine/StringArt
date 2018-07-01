@@ -99,9 +99,7 @@ public class Standart implements Serializable{
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
-		if (width != other.width)
-			return false;
-		return true;
+		return (width != other.width);
 	}
 
 	@Override

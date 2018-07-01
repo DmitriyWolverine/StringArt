@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+<div class="container">
 
 		<form class="form-horizontal" method = "post" action="authenticate">
 		  <div class="form-group col-sm-2">
@@ -34,7 +34,7 @@
 			  <button type="submit" class="btn btn-default ">Log in</button>
 		   </div>
 		</form>
-		
+</div>
 	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 

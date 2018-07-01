@@ -1,9 +1,7 @@
 body{
-	
-	background-image:url(../images/service1.jpg);
+	background-image:url(../images/index_background1.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
     background-attachment: fixed;
-	background-size: cover;
+  	background-size: cover;
 }
-

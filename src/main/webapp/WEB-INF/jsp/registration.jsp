@@ -8,7 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<link href="<c:url value="/resources/css/user.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/registration.css" />" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
@@ -19,7 +19,7 @@
 <body>
 <div class="container">
 		<div class="row">
-		  <div class="col-lg-5"></div>
+		  <div class="col-lg-7"></div>
 		  <div class="col-lg-5">
 			<form class="form-horizontal" method = "post" action="registrate">
 				  <div class="form-group col-sm-5">

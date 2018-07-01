@@ -51,7 +51,15 @@ public class Admin extends User{
 		this.users = users;
 	}
 
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
 
+	@Override
+	public boolean equals(Object obj) {
+		return super.equals(obj);
+	}
 
 	@Override
 	public String toString() {
