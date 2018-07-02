@@ -19,21 +19,34 @@
 
 <body>
 <div class="container">
-
-		<form class="form-horizontal" method = "post" action="authenticate">
-		  <div class="form-group col-sm-2">
-		    <label class="control-label col-sm-2" for="login">Login:</label>
-		    <input type="text" class="form-control" id="login" name="login" placeholder="Enter login">
-		  </div>
-		   <div class="form-group col-sm-2">
-		    <label class="control-label col-sm-2" for="pwd">Password:</label>
-		    <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter password">
-		  </div>
-		  
-		  <div class="col-sm-2">
-			  <button type="submit" class="btn btn-default ">Log in</button>
+		
+		<div class="row" id="textColor">
+		  <div class="col-lg-7">
+		 	<img src="/stringart/resources/images/helloAgain.jpg" class="img-rounded" alt="kitty" width="500" height="500" >
+			     <div class="caption">
+	         		 <p><h3> Hey, that's you again!</h3></p>
+	      		 </div>
 		   </div>
-		</form>
+		  <div class="col-lg-5">
+			<h1> Please, fill in the forms to sign in:</h1>	  
+				<form class="form-horizontal" method = "post" action="authenticate">
+				  <div class="form-group col-sm-5">
+				    <label class="control-label col-sm-5" for="login">Login:</label>
+				    <input type="text" class="form-control" id="login" name="login" placeholder="Enter login">
+				  </div>
+				   <div class="form-group col-sm-5">
+				    <label class="control-label col-sm-5" for="pwd">Password:</label>
+				    <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter password">
+				  </div>
+				  
+				  <div class="col-sm-2">
+					  <button type="submit" class="btn btn-default ">Log in</button>
+				   </div>
+				</form>
+		
+			</div>
+	</div>
+		
 </div>
 	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 

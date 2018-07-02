@@ -1,0 +1,21 @@
+body{
+	background-image:url(../images/wrongInput.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+    background-attachment: fixed;
+ 	background-size: cover;
+}
+#informatiomOut{
+    position: fixed; /* Фиксированное положение */
+    right:15%; bottom: 30%; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    width: 100%;
+	color:#a0011e;
+}
+#headColor{
+	position: fixed;
+	top: 10%;
+	padding: 10px; 
+	width: 100%;
+	color:#a0011e;
+}

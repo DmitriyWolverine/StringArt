@@ -1,7 +1,7 @@
 package by.sda.stringart.web.controller.commands;
 
 import static by.sda.stringart.web.controller.util.JspPagesNames.*;
-import static by.sda.stringart.web.controller.util.JspParametresPool.USER_LOGIN;
+import static by.sda.stringart.web.controller.util.JspParametresPool.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import by.sda.stringart.bean.users.User;
+import by.sda.stringart.service.ArtistService;
 import by.sda.stringart.service.UserService;
 
 @Controller
@@ -21,15 +22,21 @@ public class CommonController {
 	@Qualifier("userServiceImpl")
 	private UserService userService;
 	
-	public CommonController(UserService userService) {
+	@Autowired
+	@Qualifier("artistServiceImpl")
+	private ArtistService artistService;
+
+	public CommonController(UserService userService, ArtistService artistService) {
 		super();
 		this.userService = userService;
+		this.artistService = artistService;
 	}
 
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
 	public String authentication(ModelMap model, @RequestParam String login,  @RequestParam String password) {
 	     if( userService.validateUser(login, password) ) {
 	    	model.addAttribute(USER_LOGIN,login);
+	    	model.addAttribute(ARTISTS_LIST,artistService.getAll());
 	    	return USER_PAGE;
 	    }
 		model.addAttribute(USER_LOGIN,login);
@@ -75,6 +82,7 @@ public class CommonController {
 	    }
 		userService.create(login, email, password);
 		model.addAttribute(USER_LOGIN,login);
+    	model.addAttribute(ARTISTS_LIST,artistService.getAll());
 		return USER_PAGE;
 	}
 }

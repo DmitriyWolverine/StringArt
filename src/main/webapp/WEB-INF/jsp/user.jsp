@@ -17,18 +17,44 @@
 </head>
 <body>
 <div class="container">	
-	<h1 align="center">Welcome, ${login}!</h1>
-	
-	<div class="row">
-	  <div class="col-sm-6">nothing</div>
-	  <div class="col-sm-5">some text</div>
-	  <div class="col-sm-1">
-	   <form method="post" action="log_out">
-	 	<button class="btn btn-md  btn-info btn-info-outline display-4" value="log_out">
-			Log Out
-		</button>
-	</form>
+ 	<div class="row">
+ 	 	<div class="col-sm-10">
+		<h1 align="center">Hello, ${login}!</h1>
+			<table class="table">
+			    <thead>
+			      <tr>
+			        <th>Firstname</th>
+			        <th>Lastname</th>
+			        <th>Birthday</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+				    <c:forEach items="${artistList}" var="item">
+				      <tr>
+				        <td><c:out value="${item.getName()}"/></td>
+				        <td><c:out value="${item.getSurname()}"/></td>
+				        <td><c:out value="${item.getBirthdayNoTime()}"/></td>
+				      </tr>
+			      	</c:forEach> 
+			    </tbody>
+			  </table>
+		
 		</div>
+		
+		  <div class="col-sm-2">
+			   <form method="post" action="log_out">
+			   		<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="log_out">
+							Log Out
+					</button>
+			 	
+				</form>
+			</div>
+		</div>
+	
+	
+	
+	<div id="footer" >
+		  <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
 	</div>
 </div>		
 	

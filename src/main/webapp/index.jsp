@@ -13,6 +13,14 @@
 		crossorigin="anonymous">
   	<title>Home</title>
  	<style type="text/css">
+ 		body{
+		background-image:url(images/index_background1.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+	    background-attachment: fixed;
+	  	background-size: cover;
+		}
+		
 	   #footer {
 	    position: fixed; /* Фиксированное положение */
 	    text-align: center;

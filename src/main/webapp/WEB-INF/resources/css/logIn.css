@@ -1,8 +1,10 @@
 body{
-	background-image:url(../images/logIn.jpg);
+	background-image:url(../images/authent.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
     background-attachment: fixed;
 	background-size: cover; 
 }
-
+#textColor{
+	color:#adaa85;
+}

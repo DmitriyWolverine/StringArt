@@ -18,9 +18,18 @@
 </head>
 <body>
 <div class="container">
+	
 		<div class="row">
-		  <div class="col-lg-7"></div>
+		  <div class="col-lg-7">
+		   <h1>Don't forget basic rules:</h1>
+		   <h3 >
+			   <p>1) Password should be not shorter than 8 symbols;</p>
+			   <p>2) More random - harder "brute force";</p>
+			   <p>3) Changing languages, usage of numbers, punctuation signs and HIGH LETTERS - good practice;</p>
+		   </h3>
+		  </div>
 		  <div class="col-lg-5">
+		  <h1>Registration form</h1>	
 			<form class="form-horizontal" method = "post" action="registrate">
 				  <div class="form-group col-sm-5">
 				    <label class="control-label col-sm-2" for="login">Login:</label>
@@ -44,6 +53,9 @@
 		</div>
 	</div>
 	
+	<div id="footer" >
+		  <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
+	</div>
 		
 </div>
 	

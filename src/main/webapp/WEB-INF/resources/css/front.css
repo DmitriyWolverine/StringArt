@@ -1,11 +1,10 @@
 body{
-	background-image:url(../images/registration.jpg);
+	background-image:url(../images/index.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
     background-attachment: fixed;
 	background-size: cover;
 }
-
 #footer {
 	position: fixed; /* Фиксированное положение */
 	text-align: center;

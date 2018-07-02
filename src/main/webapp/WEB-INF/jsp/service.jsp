@@ -12,21 +12,39 @@
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
 	
-	<title>SERVICE Page</title>
+	<title>Service Page</title>
 
   	
 </head>
 <body>
 <div class="container">	
 	<h1 align="center">SERVICE</h1>
- 	
-	<div class="row">
-	  <div class="col-sm-5">.nothing</div>
-	  <div class="col-sm-5">.some text</div>
-	  <div class="col-sm-2">.nothing</div>
+	 <div class="row" >
+		  <div class="col-md-7">
+		   <img src="/stringart/resources/images/notebook_service.jpg" class="img-rounded" alt="notebook" >
+		  </div>
+		<div class="col-md-4">
+		 	  <h3 id="header3">
+				If we can improve our art gallery, please, let us know in any comfortable for you way. 
+				Your opinion is very important for us. 
+			  </h3>
+			  <h3 id="header3">
+			  But firstly...
+			  </h3>
+			  <form method="post" action="to_registration">
+				<button class="btn btn-md btn-outline-danger btn-secondary-outline display-4" value="to_registration">
+					Sign Up
+				</button>
+			</form>
+		</div>	
+			
+		</div>						
+							
+	<div id="footer" >
+		  <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
 	</div>
-		
-</div>	
+
+</div>
 	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 

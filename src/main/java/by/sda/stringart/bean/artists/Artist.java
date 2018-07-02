@@ -1,8 +1,10 @@
 package by.sda.stringart.bean.artists;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -104,6 +106,11 @@ public class Artist implements Serializable{
 
 	public Date getBirthday() {
 		return birthday;
+	}
+	
+	public String getBirthdayNoTime() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH);
+		return dateFormat.format(birthday);
 	}
 
 	public void setBirthday(Date birthday) {

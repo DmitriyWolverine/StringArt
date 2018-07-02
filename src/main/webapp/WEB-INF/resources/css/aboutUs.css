@@ -6,3 +6,19 @@ body{
 	background-size: cover;
 }
 
+#footer {
+	position: fixed; /* Фиксированное положение */
+	text-align: center;
+	bottom: 0; /* Левый нижний угол */
+	padding: 10px; /* Поля вокруг текста */
+	width: 70%; /* Ширина слоя */
+	color:#ffffff;
+}
+#textId{
+	position: fixed; /* Фиксированное положение */
+	bottom: 50%;
+	right: 15%;
+	color:#e9e6f0;
+	text-align: right;
+	font:40px Verdan;
+}

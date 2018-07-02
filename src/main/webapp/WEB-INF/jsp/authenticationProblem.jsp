@@ -7,7 +7,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="<c:url value="/resources/css/authenticationProblem.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/someProblem.css" />" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
@@ -16,16 +16,23 @@
   	
 </head>
 <body>
-<div class="container">	
-	<h1 align="center">Wrong login or password!</h1>
- 	
+<h2 align = "right" id="headColor">Authentication service encountered some problems...</h2>
+<div class="container" id = "informatiomOut">	
 	<div class="row">
-	  <div class="col-sm-5">.nothing</div>
-	  <div class="col-sm-5">.some text</div>
-	  <div class="col-sm-2">.nothing</div>
+	  <div class="col-md-8">
+	  
+			<h1 align="left" >Wrong login or password!</h1>
+		
+			<form method="post" action="to_authentication">
+				   	<button class="btn btn-md  btn-outline-danger btn-info-outline display-4" value="to_authentication">
+				       	Log In
+				    </button>
+			</form>
+		</div>
 	</div>
 		
 </div>	
+
 	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 

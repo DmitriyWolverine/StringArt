@@ -18,32 +18,46 @@
 </head>
 <body>
 <div class="container" id="myNewsColor">
-		<h1 align="center" >NEWS</h1>
-	 <div class="row">
+	<h1 align="center" id="headerColor" >NEWS</h1>
+	
+	<h3 align="center" id="headerColor">Here you can see some of our latest pictures. If you want to see more - sign up.</h3>
+	 <div class="row" id="picturePlace">
 	  <div class="col-md-4">
 	    <div class="thumbnail">
-	        <img src="/resources/images/egor.jpg" alt="Egor" width="300" height="200">
+	        <img src="/stringart/resources/images/leps.jpg" class="img-rounded" alt="Leps" width="350" height="350">
 	        <div class="caption">
-	          <p>Lorem ipsum...</p>
+	         	 <p >Grigory Leps</p>
+	        </div>
+	    </div>
+	  </div>
+	  <div class="col-md-4">
+	    <div class="thumbnail ">
+	        <img src="/stringart/resources/images/egor.jpg" class="img-rounded" alt="Egor" width="300" height="350">
+	        <div class="caption">
+	        	  <p >Private order</p>
 	        </div>
 	    </div>
 	  </div>
 	  <div class="col-md-4">
 	    <div class="thumbnail">
-	        <img src="/resources/images/leps.jpg" alt="Leps" width="300" height="200">
+	        <img src="/stringart/resources/images/nikulin.jpg" class="img-rounded" alt="Nikulin" width="300" height="350">
 	        <div class="caption">
-	          <p>Lorem ipsum...</p>
+	            <p >Yury Nikulin</p>
 	        </div>
 	    </div>
 	  </div>
-	  <div class="col-md-4">
-	    <div class="thumbnail">
-	        <img src="/resources/images/nikulin.jpg" alt="Nikulin" width="300" height="200">
-	        <div class="caption">
-	            <p>Lorem ipsum...</p>
-	        </div>
-	    </div>
-	  </div>
+	</div>
+	 <div class="row" >
+	 	<div class="col-md-1">
+	 	</div>
+	  	<div class="col-md-5">
+			<h3 class="mr-2" id="headerColor">Press to make good decision:</h3>
+			<form method="post" action="to_registration">
+				<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="to_registration">
+					Sign Up
+				</button>
+			</form>
+		</div>
 	</div>
 	<div id="footer" >
 		  <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
