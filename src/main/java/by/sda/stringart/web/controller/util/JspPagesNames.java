@@ -13,6 +13,7 @@ public class JspPagesNames {
 	public static final String REGISTRATION_FAILED_PAGE 	= "registrationProblem";
 	public static final String AUTHENTICATION_FAILED_PAGE	= "authenticationProblem";
 	public static final String FRONT_PAGE 					= "front";
+	public static final String ARTIST_EXHIBITION_PAGE		= "artistExhibition";
 	
 	private JspPagesNames() {
 		super();

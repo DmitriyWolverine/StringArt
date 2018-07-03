@@ -132,6 +132,10 @@ public class Artist implements Serializable{
 	public void setPictures(Set<Picture> pictures) {
 		this.pictures = pictures;
 	}
+	
+	public String getFullName() {
+		return name + " " + surname;
+	}
 
 	@Override
 	public int hashCode() {

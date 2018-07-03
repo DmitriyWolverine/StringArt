@@ -8,13 +8,14 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="<c:url value="/css/index.css" />" rel="stylesheet">
+	<!--  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/index.css" /> -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
   	<title>Home</title>
  	<style type="text/css">
  		body{
-		background-image:url(images/index_background1.jpg);
+		background-image:url(https://image.ibb.co/bKqZSJ/user_background.png);
 		background-repeat: no-repeat;
 		background-position: center;
 	    background-attachment: fixed;
@@ -82,7 +83,10 @@
 	                
 	                <div class="mbr-text align-center mbr-white pb-3">
 	                    <p class="mbr-text mbr-fonts-style display-5">
-	                        We are happy to introduce you some great works of one modern artist from Eastern Europe. Here you can see some interesting picures in different &nbsp;modern art directions. You can find describtions of some art-entities and do it by yourself</p>
+	                       <h4>We are happy to introduce you some great works of one modern artist from Eastern Europe. 
+	                       Here you can see some interesting picures in different &nbsp;modern art directions. 
+	                       You can find describtions of some art-entities and do it by yourself</h4> 
+	        
 	                </div>
 	                
 	                <div class="mbr-section-btn align-center">

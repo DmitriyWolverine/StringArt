@@ -8,3 +8,11 @@ body{
 #textColor{
 	color:#adaa85;
 }
+#footer {
+	position: fixed; /* Фиксированное положение */
+	text-align: center;
+	bottom: 0; /* Левый нижний угол */
+	padding: 10px; /* Поля вокруг текста */
+	width: 70%; /* Ширина слоя */
+	color:#adaa85;
+}

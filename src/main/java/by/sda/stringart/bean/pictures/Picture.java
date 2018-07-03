@@ -1,7 +1,6 @@
 package by.sda.stringart.bean.pictures;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -39,7 +38,7 @@ public class Picture implements Serializable{
 	@Column(name = "name")
 	private String name;
 	@Column(name = "price")
-	private BigDecimal price;
+	private String price;
 	
     @ManyToOne
     @JoinColumn(name = "artist_id")
@@ -56,6 +55,11 @@ public class Picture implements Serializable{
 	@ManyToMany(mappedBy = "pictures")
 	private List<User> users;
 	
+	@Column(name = "image")
+	private String image;
+	
+	@Column(name = "photo")
+	private String photo;
 	
 	public Picture() {
 		super();
@@ -63,7 +67,7 @@ public class Picture implements Serializable{
 	public Picture(int id) {
 		this.id = id;
 	}
-	public Picture(String name, Artist artist, BigDecimal price, Style style) {
+	public Picture(String name, Artist artist, String price, Style style) {
 		super();
 		this.name = name;
 		this.artist = artist;
@@ -71,7 +75,7 @@ public class Picture implements Serializable{
 		this.style = style;
 	} 
 	
-	public Picture(int id, String name, Artist artist, BigDecimal price, Style style) {
+	public Picture(int id, String name, Artist artist, String price, Style style) {
 		this.id = id;
 		this.name = name;
 		this.artist = artist;
@@ -99,10 +103,10 @@ public class Picture implements Serializable{
 		this.artist = artist;
 	}
 	
-	public BigDecimal getPrice() {
+	public String getPrice() {
 		return price;
 	}
-	public void setPrice(BigDecimal price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 	
@@ -120,7 +124,25 @@ public class Picture implements Serializable{
 		this.users = users;
 	}
 	
+	public Standart getStandart() {
+		return standart;
+	}
+	public void setStandart(Standart standart) {
+		this.standart = standart;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
 	
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;

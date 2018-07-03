@@ -26,6 +26,7 @@
 			        <th>Firstname</th>
 			        <th>Lastname</th>
 			        <th>Birthday</th>
+			        <th>Action</th>
 			      </tr>
 			    </thead>
 			    <tbody>
@@ -34,6 +35,14 @@
 				        <td><c:out value="${item.getName()}"/></td>
 				        <td><c:out value="${item.getSurname()}"/></td>
 				        <td><c:out value="${item.getBirthdayNoTime()}"/></td>
+				        <td>
+					        <form method="post" action="to_artist_exhibition">
+				               	<button class="btn btn-link btn-secondary-outline display-4"  value="to_artist_exhibition">
+				               		Watch pictures
+				               	</button>
+				               	<input type="hidden" name="artistId" value="${item.getId()}"/>
+							</form>
+				        </td>	
 				      </tr>
 			      	</c:forEach> 
 			    </tbody>

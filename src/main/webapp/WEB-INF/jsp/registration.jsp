@@ -19,7 +19,7 @@
 <body>
 <div class="container">
 	
-		<div class="row">
+		<div class="row" id="textColor">
 		  <div class="col-lg-7">
 		   <h1>Don't forget basic rules:</h1>
 		   <h3 >

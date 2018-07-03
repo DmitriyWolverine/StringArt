@@ -21,14 +21,14 @@
 	<h1 align="center">SERVICE</h1>
 	 <div class="row" >
 		  <div class="col-md-7">
-		   <img src="/stringart/resources/images/notebook_service.jpg" class="img-rounded" alt="notebook" >
+		   <img src="/stringart/resources/images/tree.jpg" class="img-rounded" alt="tree"  width="550" height="650">
 		  </div>
 		<div class="col-md-4">
-		 	  <h3 id="header3">
+		 	  <h3>
 				If we can improve our art gallery, please, let us know in any comfortable for you way. 
 				Your opinion is very important for us. 
 			  </h3>
-			  <h3 id="header3">
+			  <h3>
 			  But firstly...
 			  </h3>
 			  <form method="post" action="to_registration">

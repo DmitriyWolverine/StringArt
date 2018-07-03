@@ -27,12 +27,12 @@
 			   Modern art embraces a wide variety of movements, theories, and attitudes whose modernism resides 
 			   particularly in a tendency to reject traditional, historical, or academic forms and conventions in
 			    an effort to create an art more in keeping with changed social, economic, and intellectual conditions.</h3>
-			    <h3>If you are young, ambitious and creative person, the best thing you can do is to contact with us</h3>
-			    <h3>	
-			    	<a class="btn btn-link" href="tel:+7-916-307-00-61">
-						<i class="glyphicon glyphicon-phone"></i> +7-916-307-00-61
-                    </a>
-                </h3>
+			    <h3>If you are young, ambitious and creative person, the best thing you can do is to contact with us.</h3>
+			    	
+			    <a class="btn btn-link btn-xs" href="tel:+7-916-307-00-61" id="largeSymbols">
+					<i class="glyphicon glyphicon-phone"></i> +7-916-307-00-61 
+                </a>
+               
 	    </div>
 
 	</div>		

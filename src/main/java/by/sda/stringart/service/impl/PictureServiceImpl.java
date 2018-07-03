@@ -51,4 +51,10 @@ public class PictureServiceImpl implements PictureService{
 		return pictureDao.readAll();
 	}
 
+	@Override
+	public List<Picture> getOneArtistPicturesList(int artistId) {
+		return pictureDao.readOneArtistPictures(artistId);
+	}
+	
+
 }

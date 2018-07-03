@@ -7,49 +7,65 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href="<c:url value="/resources/css/logIn.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/user.css" />" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
 	
-	<title>Authentication Page</title>
+	<title>Admin page</title>
 	
 </head>
-
 <body>
-<div class="container">
+<div class="container">	
+ 	<div class="row">
+ 	 	<div class="col-sm-10">
+		<h1 align="center">Hello, ${login}!</h1>
+			<table class="table">
+			    <thead>
+			      <tr>
+			        <th>Firstname</th>
+			        <th>Lastname</th>
+			        <th>Birthday</th>
+			        <th>Action</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+				    <c:forEach items="${artistList}" var="item">
+				      <tr>
+				        <td><c:out value="${item.getName()}"/></td>
+				        <td><c:out value="${item.getSurname()}"/></td>
+				        <td><c:out value="${item.getBirthdayNoTime()}"/></td>
+				        <td>
+					        <form method="post" action="to_artist_exhibition">
+				               	<button class="btn btn-link btn-secondary-outline display-4" type="hidden"  value="to_artist_exhibition">
+				               		Watch pictures
+				               	</button>
+							</form>
+				        </td>	
+				      </tr>
+			      	</c:forEach> 
+			    </tbody>
+			  </table>
 		
-		<div class="row" id="textColor">
-		  <div class="col-lg-7">
-		 	<img src="/stringart/resources/images/helloAgain.jpg" class="img-rounded" alt="kitty" width="500" height="500" >
-			     <div class="caption">
-	         		 <p><h3> Hey, that's you again!</h3></p>
-	      		 </div>
-		   </div>
-		  <div class="col-lg-5">
-			<h1> Please, fill in the forms to sign in:</h1>	  
-				<form class="form-horizontal" method = "post" action="authenticate">
-				  <div class="form-group col-sm-5">
-				    <label class="control-label col-sm-5" for="login">Login:</label>
-				    <input type="text" class="form-control" id="login" name="login" placeholder="Enter login">
-				  </div>
-				   <div class="form-group col-sm-5">
-				    <label class="control-label col-sm-5" for="pwd">Password:</label>
-				    <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter password">
-				  </div>
-				  <div class="col-sm-2">
-					  <button type="submit" class="btn btn-default ">Log in</button>
-				   </div>
+		</div>
+		
+		  <div class="col-sm-2">
+			   <form method="post" action="log_out">
+			   		<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="log_out">
+							Log Out
+					</button>
+			 	
 				</form>
-		
 			</div>
-	</div>
+		</div>
 	
-	<div id="footer" id="textColor">
+	
+	
+	<div id="footer" >
 		  <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
 	</div>
-</div>
+</div>		
+	
 	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 

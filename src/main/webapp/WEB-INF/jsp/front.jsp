@@ -23,11 +23,9 @@
 	
 	   <div class="row">
 	       <div class="col-sm-7" >
-	            <div class="navbar-brand"> 
 	               	<a class="navbar-caption text-black display-4" href="https://instagram.com/shad.anthony">
 	                   	Anthony Shad
 	                </a>
-	            </div>
 	        </div>
 	       <div class="col-sm-5">
 	            <ul class="row"  data-app-modern-menu="true" style="list-style-type:none">
@@ -63,12 +61,17 @@
 	    <div class="container">
 	        <div class="row justify-content-md-center">
 	            <div class="media-content col-md-10">
-	                <h1 class="mbr-section-title align-center mbr-white pb-3 mbr-bold mbr-fonts-style display-1">Welcome to our Art Gallery</h1>
+	                <h2 class="mbr-section-title align-center mbr-white pb-3 mbr-bold mbr-fonts-style display-3">Welcome to our Art Gallery</h2>
 	                
 	                <div class="mbr-text align-center mbr-white pb-3">
 	                    <p class="mbr-text mbr-fonts-style display-5">
 	                        We are happy to introduce you some great works of one modern artist from Eastern Europe. Here you can see some interesting picures in different &nbsp;modern art directions. You can find describtions of some art-entities and do it by yourself</p>
 	                </div>
+	                
+	                 <img src="/stringart/resources/images/leps.jpg" class="img-rounded" alt="Leps" width="350" height="350">
+				        <div class="caption">
+				         	 <p >Grigory Leps</p>
+				        </div>
 	                
 	                <div class="mbr-section-btn align-center">
 	                

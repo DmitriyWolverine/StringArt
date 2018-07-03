@@ -1,5 +1,6 @@
 package by.sda.stringart.dao.hibernate.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -56,6 +57,23 @@ public class PictureDaoHibernateImpl implements PictureDao{
 		Session session = SessionFactoryManager.getSessionFactory().openSession();
 		Criteria criteria = session.createCriteria(Picture.class);
 		List<Picture> pictures = criteria.list();
+		session.close();
+		return pictures;
+	}
+
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Picture> readOneArtistPictures(int artistId) {
+		Session session = SessionFactoryManager.getSessionFactory().openSession();
+		Criteria criteria = session.createCriteria(Picture.class);
+		List<Picture> allPictures = criteria.list();
+		List<Picture> pictures = new ArrayList<>();
+		for(Picture p: allPictures) {
+			if(p.getArtist().getId() == artistId) {
+				pictures.add(p);
+			}
+		}
 		session.close();
 		return pictures;
 	}

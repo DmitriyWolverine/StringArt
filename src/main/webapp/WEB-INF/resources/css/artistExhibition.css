@@ -1,11 +1,9 @@
 body{
-	
-	background-image:url(../images/service1.jpg);
+	background-image:url(../images/artistExhibition.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
     background-attachment: fixed;
 	background-size: cover;
-	
 }
 #footer {
 	position: fixed; /* Фиксированное положение */
@@ -13,4 +11,5 @@ body{
 	bottom: 0; /* Левый нижний угол */
 	padding: 10px; /* Поля вокруг текста */
 	width: 70%; /* Ширина слоя */
+	color:#000000;
 }
