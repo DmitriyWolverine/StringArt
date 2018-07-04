@@ -1,8 +1,10 @@
 package by.sda.stringart.bean.orders;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,11 +12,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+import by.sda.stringart.bean.pictures.Picture;
 import by.sda.stringart.bean.users.User;
+
 
 @Component
 @Entity
@@ -36,10 +41,16 @@ public class Order implements Serializable{
 	private Date deadLineDate;
 	@Column(name = "status")
 	private String status;
+	@Column(name = "price")
+	private BigDecimal price;
 	
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private User user;
+	
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name = "picture_id")
+	private Picture picture;
 	
 	
 	public Order() {
@@ -64,6 +75,12 @@ public class Order implements Serializable{
 		this.appliedDate = appliedDate;
 		this.deadLineDate = deadLineDate;
 		this.status = status;
+	}
+	
+	public Order(String name, BigDecimal price){
+		super();
+		this.name = name;
+		this.price = price;
 	}
 
 	public int getId() {
@@ -104,6 +121,30 @@ public class Order implements Serializable{
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
+	public Picture getPicture() {
+		return picture;
+	}
+
+	public void setPicture(Picture picture) {
+		this.picture = picture;
 	}
 
 	@Override

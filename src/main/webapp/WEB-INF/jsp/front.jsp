@@ -65,7 +65,8 @@
 	                
 	                <div class="mbr-text align-center mbr-white pb-3">
 	                    <p class="mbr-text mbr-fonts-style display-5">
-	                        We are happy to introduce you some great works of one modern artist from Eastern Europe. Here you can see some interesting picures in different &nbsp;modern art directions. You can find describtions of some art-entities and do it by yourself</p>
+	                        We are happy to introduce you some great works of one modern artist from Eastern Europe.
+	                         Here you can see some interesting pictures in different &nbsp;modern art directions. You can find descriptions of some art-entities and do it by yourself</p>
 	                </div>
 	                
 	                 <img src="/stringart/resources/images/leps.jpg" class="img-rounded" alt="Leps" width="350" height="350">

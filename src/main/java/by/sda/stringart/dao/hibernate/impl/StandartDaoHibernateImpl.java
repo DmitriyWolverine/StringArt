@@ -6,7 +6,6 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
-import by.sda.stringart.bean.pictures.Picture;
 import by.sda.stringart.bean.standarts.Standart;
 import by.sda.stringart.dao.StandartDao;
 import by.sda.stringart.dao.hibernate.SessionFactoryManager;
@@ -55,7 +54,7 @@ public class StandartDaoHibernateImpl implements StandartDao{
 	@Override
 	public List<Standart> readAll() {
 		Session session = SessionFactoryManager.getSessionFactory().openSession();
-		Criteria criteria = session.createCriteria(Picture.class);
+		Criteria criteria = session.createCriteria(Standart.class);
 		List<Standart> standarts = criteria.list();
 		session.close();
 		return standarts;

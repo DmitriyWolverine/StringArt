@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import by.sda.stringart.bean.standarts.Standart;
 import by.sda.stringart.dao.StandartDao;
-import by.sda.stringart.dao.hibernate.impl.StandartDaoHibernateImpl;
 import by.sda.stringart.service.StandartService;
 
 @Service
@@ -20,7 +19,6 @@ public class StandartServiceImpl implements StandartService{
 	
 	public StandartServiceImpl() {
 		super();
-		standartDao = new StandartDaoHibernateImpl();
 	}
 
 	public StandartServiceImpl(StandartDao standartDao) {

@@ -17,10 +17,12 @@
 </head>
 <body>
 <div class="container" >
- 	<h1 align="center">ABOUT US</h1>
+ 	
  	
 	<div class="row" id="textId">
-	  <div class="col-sm-4"></div>
+	  <div class="col-sm-4">
+	  	<h1 align="center">ABOUT US</h1>
+	  </div>
 		  <div class="col-sm-8">
 			  <h3>Modern art, painting, sculpture, architecture, and graphic arts characteristic of the 20th and 21st 
 			  centuries and of the later part of the 19th century.
@@ -32,8 +34,32 @@
 			    <a class="btn btn-link btn-xs" href="tel:+7-916-307-00-61" id="largeSymbols">
 					<i class="glyphicon glyphicon-phone"></i> +7-916-307-00-61 
                 </a>
+                
+                
+                 <div class="mbr-section-btn align-center">
+	                
+		                <ul class="row" data-app-modern-menu="true"  style="list-style-type:none">
+			          		<li class="mr-4">
+			                    <form method="post" action="to_authentication">
+					               	<button class="btn btn-md  btn-primary btn-info-outline display-4" value="to_authentication">
+					               		Log In
+					               	</button>
+								</form>
+			                </li>
+		                
+							<li>
+								 <form method="post" action="to_registration">
+					               	<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="to_registration">
+					               		Sign Up
+					               	</button>
+								</form>
+							</li>
+						</ul>
+	                </div>
                
 	    </div>
+
+		
 
 	</div>		
 						

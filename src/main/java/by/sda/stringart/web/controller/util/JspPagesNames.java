@@ -9,11 +9,13 @@ public class JspPagesNames {
 	public static final String NEWS_PAGE 					= "news";
 	public static final String ABOUT_US_PAGE 				= "aboutUs";
 	public static final String SERVICE_PAGE 				= "service";
+	public static final String ADMIN_PAGE 					= "admin";
 	public static final String USER_PAGE 					= "user";
 	public static final String REGISTRATION_FAILED_PAGE 	= "registrationProblem";
 	public static final String AUTHENTICATION_FAILED_PAGE	= "authenticationProblem";
 	public static final String FRONT_PAGE 					= "front";
 	public static final String ARTIST_EXHIBITION_PAGE		= "artistExhibition";
+	public static final String ORDER_CREATION_PAGE			= "orderCreation";
 	
 	private JspPagesNames() {
 		super();

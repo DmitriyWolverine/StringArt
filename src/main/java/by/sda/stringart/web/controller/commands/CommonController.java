@@ -37,6 +37,9 @@ public class CommonController {
 	     if( userService.validateUser(login, password) ) {
 	    	model.addAttribute(USER_LOGIN,login);
 	    	model.addAttribute(ARTISTS_LIST,artistService.getAll());
+	    	if(userService.readByLogin(login).getRole() == 2) {
+	    		return ADMIN_PAGE;
+	    	}
 	    	return USER_PAGE;
 	    }
 		model.addAttribute(USER_LOGIN,login);

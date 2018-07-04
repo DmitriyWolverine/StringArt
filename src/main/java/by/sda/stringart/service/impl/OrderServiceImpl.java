@@ -1,5 +1,6 @@
 package by.sda.stringart.service.impl;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,8 +8,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import by.sda.stringart.bean.orders.Order;
+import by.sda.stringart.bean.pictures.Picture;
+import by.sda.stringart.bean.users.User;
 import by.sda.stringart.dao.OrderDao;
-import by.sda.stringart.dao.hibernate.impl.OrderDaoHibernateImpl;
 import by.sda.stringart.service.OrderService;
 
 @Service
@@ -18,12 +20,10 @@ public class OrderServiceImpl implements OrderService{
 	@Qualifier("orderDaoHibernateImpl")
 	private OrderDao orderDao;
 	
-	
 	public OrderServiceImpl() {
 		super();
-		this.orderDao = new OrderDaoHibernateImpl();
 	}
-	
+
 	public OrderServiceImpl(OrderDao orderDao) {
 		super();
 		this.orderDao = orderDao;
@@ -32,6 +32,11 @@ public class OrderServiceImpl implements OrderService{
 	@Override
 	public void create(Order order) {
 		orderDao.create(order);
+	}
+
+	@Override
+	public void createOrderByParams(String name, User user, Picture picture, BigDecimal price) {
+		orderDao.createOrderByParams(name, user, picture, price);
 	}
 
 	@Override

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import by.sda.stringart.bean.util.Style;
 import by.sda.stringart.dao.StyleDao;
-import by.sda.stringart.dao.hibernate.impl.StyleDaoHibernateImpl;
 import by.sda.stringart.service.StyleService;
 
 @Service
@@ -20,7 +19,6 @@ public class StyleServiceImpl implements StyleService{
 
 	public StyleServiceImpl() {
 		super();
-		styleDao = new StyleDaoHibernateImpl();
 	}
 	
 	public StyleServiceImpl(StyleDao styleDao) {

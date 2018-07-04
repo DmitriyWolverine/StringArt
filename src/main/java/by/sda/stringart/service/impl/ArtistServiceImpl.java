@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import by.sda.stringart.bean.artists.Artist;
 import by.sda.stringart.dao.ArtistDao;
-import by.sda.stringart.dao.hibernate.impl.ArtistDaoHibernateImpl;
 import by.sda.stringart.service.ArtistService;
 
 @Service
@@ -20,7 +19,6 @@ public class ArtistServiceImpl implements ArtistService{
 	
 	public ArtistServiceImpl() {
 		super();
-		this.artistDao = new ArtistDaoHibernateImpl();
 	}
 	
 

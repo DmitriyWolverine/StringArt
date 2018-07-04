@@ -1,18 +1,27 @@
 package by.sda.stringart.dao.hibernate.impl;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import by.sda.stringart.bean.orders.Order;
+import by.sda.stringart.bean.pictures.Picture;
+import by.sda.stringart.bean.users.User;
 import by.sda.stringart.dao.OrderDao;
 import by.sda.stringart.dao.hibernate.SessionFactoryManager;
 
 @Repository
 public class OrderDaoHibernateImpl implements OrderDao{
-
+	
+	@Autowired
+	@Qualifier("order")
+	private Order order;
+	
 	public OrderDaoHibernateImpl() {
 		super();
 	}
@@ -58,6 +67,23 @@ public class OrderDaoHibernateImpl implements OrderDao{
 		List<Order> orders = criteria.list();
 		session.close();
 		return orders;
+	}
+
+	@Override
+	public void createOrderByParams(String name, User user, Picture picture, BigDecimal price) {
+		Session session = SessionFactoryManager.getSessionFactory().openSession();
+		session.beginTransaction();
+		session.save( getDeterminedOrder(name,user,picture,price) );
+		session.getTransaction().commit();
+		session.close();
+	}
+	
+	private Order getDeterminedOrder(String name, User user, Picture picture, BigDecimal price) {
+		order.setName(name);
+		order.setPicture(picture);
+		order.setUser(user);
+		order.setPrice(price);
+		return order;
 	}
 
 } 

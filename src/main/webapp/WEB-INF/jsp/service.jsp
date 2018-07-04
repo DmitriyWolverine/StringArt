@@ -31,11 +31,26 @@
 			  <h3>
 			  But firstly...
 			  </h3>
-			  <form method="post" action="to_registration">
-				<button class="btn btn-md btn-outline-danger btn-secondary-outline display-4" value="to_registration">
-					Sign Up
-				</button>
-			</form>
+			   <div class="mbr-section-btn align-center">
+	                
+		                <ul class="row" data-app-modern-menu="true"  style="list-style-type:none">
+			          		<li class="mr-4">
+			                    <form method="post" action="to_authentication">
+					               	<button class="btn btn-md  btn-outline-primary btn-info-outline display-4" value="to_authentication">
+					               		Log In
+					               	</button>
+								</form>
+			                </li>
+		                
+							<li>
+								 <form method="post" action="to_registration">
+					               	<button class="btn btn-md btn-outline-danger btn-secondary-outline display-4" value="to_registration">
+					               		Sign Up
+					               	</button>
+								</form>
+							</li>
+						</ul>
+	                </div>
 		</div>	
 			
 		</div>						

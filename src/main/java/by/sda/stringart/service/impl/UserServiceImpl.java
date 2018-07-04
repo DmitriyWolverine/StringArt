@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import by.sda.stringart.bean.users.User;
 import by.sda.stringart.dao.UserDao;
-import by.sda.stringart.dao.hibernate.impl.UserDaoHibernateImpl;
 import by.sda.stringart.service.UserService;
 
 @Service
@@ -21,7 +20,6 @@ public class UserServiceImpl implements UserService{
 
 	public UserServiceImpl() {
 		super();
-		this.userDao = new UserDaoHibernateImpl();
 	}
 
 	public UserServiceImpl(UserDao userDao) {
@@ -55,6 +53,16 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
+	public User readByLogin(String login) {
+		for(User u: userDao.readAll()) {
+			if(u.getLogin().equals(login)) {
+				return u;
+			}
+		}
+		return null;
+	}
+
+	@Override
 	public List<User> getAll() {
 		return userDao.readAll();
 	}
@@ -69,7 +77,7 @@ public class UserServiceImpl implements UserService{
 		return false;
 	}
 	
-	private boolean validateParams(User user, String login,  String password) {
+	private boolean validateParams(User user, String login, String password) {
 		return login.equals(user.getLogin()) && password.equals(user.getPass()) ;
 	}
 }

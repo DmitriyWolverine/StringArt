@@ -36,10 +36,11 @@
 				        <td><c:out value="${item.getName()}"/></td>
 				        <td><c:out value="${item.getPrice()}"/></td>
 				        <td>
-					        <form method="post" action="to_artist_exhibition">
-				               	<button class="btn btn-link btn-secondary-outline display-4" type="hidden"  value="to_artist_exhibition">
+					        <form method="post" action="to_create_order_page">
+				               	<button class="btn btn-link btn-secondary-outline display-4" type="hidden"  value="to_create_order_page">
 				               		Order copy
 				               	</button>
+				               	<input type="hidden" name="pictureId" value="${item.getId()}"/>
 							</form>
 				        </td>	
 				      </tr>

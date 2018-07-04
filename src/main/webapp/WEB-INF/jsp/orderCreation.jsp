@@ -7,51 +7,65 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="<c:url value="/resources/css/user.css" />" rel="stylesheet">
+	
+	<link href="<c:url value="/resources/css/news.css" />" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
 	
-	<title>Admin page</title>
-
-	
+	<title>Order creation Page</title>
+  	
 </head>
 <body>
-<div class="container">	
  	<div class="row">
- 	 	<div class="col-sm-10">
-		<h1 align="center">Hello, ${login}!</h1>
+ 	 	<div class="col-sm-11">
+		<h1 align="center">Create your order</h1>
 			<table class="table">
 			    <thead>
 			      <tr>
-			        <th>Firstname</th>
-			        <th>Lastname</th>
-			        <th>Birthday</th>
-			        <th>Action</th>
+			        <th>Photo</th>
+			        <th>Picture</th>
+			        <th>Name</th>
+			        <th>Price</th>
+			        <th>Order</th>
 			      </tr>
 			    </thead>
 			    <tbody>
-				    <c:forEach items="${artistList}" var="item">
 				      <tr>
-				        <td><c:out value="${item.getName()}"/></td>
-				        <td><c:out value="${item.getSurname()}"/></td>
-				        <td><c:out value="${item.getBirthdayNoTime()}"/></td>
+				     	<td><img src="${picture.getPhoto()}" width=300 height = 300/></td>
+				     	<td><img src="${picture.getImage()}" width=250 height = 300/></td>
 				        <td>
-					        <form method="post" action="to_artist_exhibition">
-				               	<button class="btn btn-link btn-secondary-outline display-4"  value="to_artist_exhibition">
-				               		Watch pictures
+					        <div class="dropdown">
+							  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose size
+							  	<span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu">
+								  <c:forEach items="${standartList}" var="standart">
+								        <li>${standart.getName()}</li>
+							      </c:forEach> 
+							  </ul>
+							</div>
+						</td>
+				        <td>
+				       	  <div class="col-xs-2">
+						    <input class="form-control" id="ex1" type="text" name="price"  placeholder="Enter you price">
+						  </div>
+						</td>
+				      	<td>
+					        <form method="post" action="to_create_order_page">
+				               	<button class="btn btn-link btn-secondary-outline display-4" type="hidden"  value="create_order">
+				               		Submit
 				               	</button>
-				               	<input type="hidden" name="artistId" value="${item.getId()}"/>
 							</form>
 				        </td>	
 				      </tr>
-			      	</c:forEach> 
+			 
 			    </tbody>
 			  </table>
 		
 		</div>
 		
-		  <div class="col-sm-2">
+		  <div class="col-sm-1">
 			   <form method="post" action="log_out">
 			   		<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="log_out">
 							Log Out
@@ -65,8 +79,7 @@
 	
 	<div id="footer" >
 		  <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
-	</div>
-</div>		
+	</div>	
 	
 	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 

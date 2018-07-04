@@ -4,6 +4,8 @@ public class JspParametresPool {
 	public static final String ARTISTS_LIST 	= "artistList";
 	public static final String STYLES_LIST 		= "stylesList";
 	public static final String PICTURES_LIST	= "picturesList";
+	public static final String PICTURE			= "picture";
+	public static final String STANDARTS_LIST 	= "standartList";
 	
 	public static final String USER_LOGIN 		= "login";
 	public static final String ARTIST_ID 		= "artistId";
