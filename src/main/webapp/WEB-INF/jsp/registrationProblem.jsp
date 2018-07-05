@@ -22,13 +22,24 @@
 	<div class="row">
 	  <div class="col-md-8">
 	  
-			<h1 align="left" >Such user has already been registrated, try to log in!</h1>
-		
-			<form method="post" action="to_authentication">
-				   	<button class="btn btn-md  btn-outline-danger btn-info-outline display-4" value="to_authentication">
-				       	Log In
-				    </button>
-			</form>
+			<h1 align="left" >	${errorString }</h1>
+				 <ul class="row" data-app-modern-menu="true"  style="list-style-type:none">
+		          		<li class="mr-4">
+		                    <form method="post" action="to_authentication">
+				               	<button class="btn btn-md  btn-outline-primary btn-info-outline display-4" value="to_authentication">
+				               		Log In
+				               	</button>
+							</form>
+		                </li>
+	                
+						<li>
+							 <form method="post" action="to_registration">
+				               	<button class="btn btn-md btn-outline-danger btn-secondary-outline display-4" value="to_registration">
+				               		Sign Up
+				               	</button>
+							</form>
+						</li>
+					</ul>
 		</div>
 	</div>
 		

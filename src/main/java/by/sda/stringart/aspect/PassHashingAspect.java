@@ -26,8 +26,6 @@ public class PassHashingAspect {
 		return pjp.proceed(res);
 	}
 	
-	
-	
 	private StringBuilder passToStrBuilder(String pass) {
 		SHA3.DigestSHA3 digestSHA3 = new SHA3.Digest512();
 	    byte[] digest = digestSHA3.digest(pass.getBytes());

@@ -97,9 +97,14 @@ public class CommonController {
 	@RequestMapping(value ="/registrate", method = RequestMethod.POST)
 	public String registration(ModelMap model, @RequestParam String login, @RequestParam String password, @RequestParam String email) {
 		for(User user: userService.getAll()) {
-	    	  if( login.equals(user.getLogin()) || email.equals(user.getEmail()) ) {
+			if(login.length() == 0 || password.length() == 0 || email.length() == 0) {
+	    		 model.addAttribute(ERROR_STRING,EMPTY_FIELDS);
 	    		 return REGISTRATION_FAILED_PAGE;
-	    	  }
+		    }
+		    else if( login.equals(user.getLogin()) || email.equals(user.getEmail()) ) {
+	    		 model.addAttribute(ERROR_STRING,USER_EXISTS);
+	    		 return REGISTRATION_FAILED_PAGE;
+	    	}
 	    }
 		userService.create(login, email, password);
 		model.addAttribute(USER_LOGIN,login);

@@ -25,8 +25,6 @@
 			root
 		</property>
 		
-		<!--  <property name="show_sql">true</property> -->
-		<!--  очень плохо, надо изменить на нормальный метод ленивой загрузки, а не это -->
 		<property name="hibernate.enable_lazy_load_no_trans">true</property>
 		
 		<mapping class="by.sda.stringart.bean.util.Style"></mapping>
