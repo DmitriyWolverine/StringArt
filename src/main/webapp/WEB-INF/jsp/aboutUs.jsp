@@ -47,7 +47,7 @@
 								</form>
 			                </li>
 		                
-							<li>
+							<li class="mr-4">
 								 <form method="post" action="to_registration">
 					               	<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="to_registration">
 					               		Sign Up
@@ -56,7 +56,7 @@
 							</li>
 							<li>
 								<form method="post" action="to_main_page">
-						               	<button class="btn btn-md  btn-outline-success btn-info-outline display-4" value="to_main_page">
+						               	<button class="btn btn-md  btn-success btn-secondary-outline display-4" value="to_main_page">
 						               		To main page
 						               	</button>
 								</form>

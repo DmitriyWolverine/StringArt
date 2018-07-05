@@ -35,6 +35,13 @@
 					               		To main page
 					               	</button>
 								</form>
+							</li>
+							<li class="mr-4">	
+								<form method="post" action="to_user_page">
+							   		<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="to_user_page">
+											Back
+									</button>
+								</form>
 			                </li>
 		                
 						</ul>

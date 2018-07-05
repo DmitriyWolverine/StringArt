@@ -23,6 +23,8 @@ public class JspPagesNames {
 	public static final String ORDER_SUCCESSFULLY_CREATED	= "orderSuccessfullyCreated";
 	
 	public static final String USER_ORDERSS_PAGE			= "userOrders";
+	public static final String ORDERS_MANAGEMENT_PAGE		= "ordersManagement";
+	public static final String UPDATION_PICTURE_PAGE		= "updatePicture";
 	
 	private JspPagesNames() {
 		super();

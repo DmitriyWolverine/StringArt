@@ -38,7 +38,7 @@
 								</form>
 			                </li>
 		                
-							<li>
+							<li class="mr-4">
 								 <form method="post" action="to_registration">
 					               	<button class="btn btn-md btn-outline-danger btn-secondary-outline display-4" value="to_registration">
 					               		Sign Up

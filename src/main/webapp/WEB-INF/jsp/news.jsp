@@ -66,24 +66,24 @@
 		                <ul class="row" data-app-modern-menu="true"  style="list-style-type:none">
 			          		<li class="mr-4">
 			                    <form method="post" action="to_authentication">
-					               	<button class="btn btn-md  btn-outline-primary btn-info-outline display-4" value="to_authentication">
+					               	<button class="btn btn-md  btn-primary btn-info-outline display-4" value="to_authentication">
 					               		Log In
 					               	</button>
 								</form>
 			                </li>
 		                
-							<li>
+							<li class="mr-4">
 								 <form method="post" action="to_registration">
-					               	<button class="btn btn-md btn-outline-danger btn-secondary-outline display-4" value="to_registration">
+					               	<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="to_registration">
 					               		Sign Up
 					               	</button>
 								</form>
 							</li>
 							<li>
 								<form method="post" action="to_main_page">
-									<button class="btn btn-md  btn-outline-success btn-info-outline display-4" value="to_main_page">
-										To main page
-									</button>
+						               	<button class="btn btn-md  btn-success btn-secondary-outline display-4" value="to_main_page">
+						               		To main page
+						               	</button>
 								</form>
 							</li>
 						</ul>

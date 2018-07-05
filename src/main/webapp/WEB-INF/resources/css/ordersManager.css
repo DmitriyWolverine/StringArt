@@ -1,0 +1,14 @@
+body{
+	background-image:url(../images/ordersManager.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+    background-attachment: fixed;
+	background-size: cover;
+}
+#footer {
+	position: fixed; /* Фиксированное положение */
+	text-align: center;
+	bottom: 0; /* Левый нижний угол */
+	padding: 10px; /* Поля вокруг текста */
+	width: 70%; /* Ширина слоя */
+}

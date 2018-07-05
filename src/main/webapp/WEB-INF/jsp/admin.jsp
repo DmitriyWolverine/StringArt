@@ -21,6 +21,11 @@
  	<div class="row">
  	 	<div class="col-sm-10">
 		<h1 align="center">Hello, ${login}!</h1>
+			<form method="post" action="to_orders">
+				<button class="btn btn-warning"  value="to_orders">
+				    	Show orders
+			 	</button>
+			</form>
 			<table class="table">
 			    <thead>
 			      <tr>

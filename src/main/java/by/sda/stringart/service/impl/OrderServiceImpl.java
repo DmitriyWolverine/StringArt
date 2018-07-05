@@ -59,4 +59,10 @@ public class OrderServiceImpl implements OrderService{
 		return orderDao.readAll();
 	}
 
+	@Override
+	public void changeStatus(Order entity, String status) {
+		entity.setStatus(status);
+		orderDao.update(entity);
+	}
+
 }

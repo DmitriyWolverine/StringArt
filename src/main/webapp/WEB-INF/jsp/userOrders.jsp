@@ -19,7 +19,7 @@
 <div class="container">	
  	<div class="row">
  	 	<div class="col-sm-10">
-		<h1 align="center">Welcome to your order, ${artistName}!</h1>
+		<h1 align="center">Welcome to your orders, ${login}!</h1>
 			<table class="table">
 			    <thead>
 			      <tr>
@@ -73,7 +73,6 @@
 			   		<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="to_user_page">
 							Back
 					</button>
-			 	
 				</form>
 			</div>
 		</div>
