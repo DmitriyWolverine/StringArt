@@ -5,8 +5,6 @@ import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import by.sda.stringart.bean.orders.Order;
@@ -17,10 +15,6 @@ import by.sda.stringart.dao.hibernate.SessionFactoryManager;
 
 @Repository
 public class OrderDaoHibernateImpl implements OrderDao{
-	
-	@Autowired
-	@Qualifier("order")
-	private Order order;
 	
 	public OrderDaoHibernateImpl() {
 		super();
@@ -38,9 +32,9 @@ public class OrderDaoHibernateImpl implements OrderDao{
 	@Override
 	public Order read(int id) {
 		Session session = SessionFactoryManager.getSessionFactory().openSession();
-		Order order = (Order)session.get(Order.class, id);
+		Order o = (Order)session.get(Order.class, id);
 		session.close();
-		return order;
+		return o;
 	}
 
 	@Override
@@ -79,6 +73,7 @@ public class OrderDaoHibernateImpl implements OrderDao{
 	}
 	
 	private Order getDeterminedOrder(String name, User user, Picture picture, BigDecimal price) {
+		Order order = new Order();
 		order.setName(name);
 		order.setPicture(picture);
 		order.setUser(user);

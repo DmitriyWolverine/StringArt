@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import by.sda.stringart.bean.orders.Order;
 import by.sda.stringart.bean.users.User;
 import by.sda.stringart.dao.UserDao;
 import by.sda.stringart.service.UserService;
@@ -80,4 +81,11 @@ public class UserServiceImpl implements UserService{
 	private boolean validateParams(User user, String login, String password) {
 		return login.equals(user.getLogin()) && password.equals(user.getPass()) ;
 	}
+
+	@Override
+	public List<Order> getAllOrders(User entity) {
+		return userDao.ordersList(entity);
+	}
+	
+	
 }

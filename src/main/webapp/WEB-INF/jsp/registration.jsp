@@ -52,7 +52,11 @@
 			</form>
 		</div>
 	</div>
-	
+	<form method="post" action="to_main_page">
+		<button class="btn btn-md  btn-outline-success btn-info-outline display-4" value="to_main_page">
+			To main page
+		</button>
+	</form>
 	<div id="footer" >
 		  <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
 	</div>

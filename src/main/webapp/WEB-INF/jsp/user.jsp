@@ -20,6 +20,12 @@
  	<div class="row">
  	 	<div class="col-sm-10">
 		<h1 align="center">Hello, ${login}!</h1>
+			<form method="post" action="to_user_orders">
+				<button class="btn btn-warning"  value="to_user_orders">
+				    	Show orders
+			 	</button>
+			</form>
+		
 			<table class="table">
 			    <thead>
 			      <tr>
@@ -55,7 +61,6 @@
 			   		<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="log_out">
 							Log Out
 					</button>
-			 	
 				</form>
 			</div>
 		</div>

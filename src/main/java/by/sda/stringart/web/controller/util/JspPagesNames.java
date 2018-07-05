@@ -17,6 +17,13 @@ public class JspPagesNames {
 	public static final String ARTIST_EXHIBITION_PAGE		= "artistExhibition";
 	public static final String ORDER_CREATION_PAGE			= "orderCreation";
 	
+	public static final String ARTIST_EXHIBITION_ADMIN_PAGE = "adminArtistExhibition";
+	
+	public static final String ACCESS_DENIED_PAGE			= "accessDenied";
+	public static final String ORDER_SUCCESSFULLY_CREATED	= "orderSuccessfullyCreated";
+	
+	public static final String USER_ORDERSS_PAGE			= "userOrders";
+	
 	private JspPagesNames() {
 		super();
 	}

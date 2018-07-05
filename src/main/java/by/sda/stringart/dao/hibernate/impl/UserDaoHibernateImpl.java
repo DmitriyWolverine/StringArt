@@ -6,6 +6,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
+import by.sda.stringart.bean.orders.Order;
 import by.sda.stringart.bean.users.User;
 import by.sda.stringart.dao.UserDao;
 import by.sda.stringart.dao.hibernate.SessionFactoryManager;
@@ -68,6 +69,11 @@ public class UserDaoHibernateImpl implements UserDao{
 		List<User> users = criteria.list();
 		session.close();
 		return users;
+	}
+
+	@Override
+	public List<Order> ordersList(User entity) {
+		return read(entity.getId()).getOrders();
 	}
 
 

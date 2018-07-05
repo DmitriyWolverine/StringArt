@@ -1,29 +1,19 @@
- body {
- 	background-image:url(../images/news.jpg);
+body{
+	background-image:url(../images/accessDenied.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
     background-attachment: fixed;
-    background-size: cover;
- }
- 
-#myNewsColor {
-	color:#636363;
-}
-
-#picturesPlace{
-	text-align: center;
-	position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-	
+	background-size: cover;
 }
 
 #footer {
 	position: fixed; /* Фиксированное положение */
 	text-align: center;
 	bottom: 0; /* Левый нижний угол */
-	bottom: 0;
 	padding: 10px; /* Поля вокруг текста */
 	width: 70%; /* Ширина слоя */
+	color:#ffffff;
+}
+#colors {
+	color:#8B0000;
 }

@@ -7,56 +7,36 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="<c:url value="/resources/css/service.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/orderCreated.css" />" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
 	
-	<title>Service Page</title>
+	<title>Order created Page</title>
 
   	
 </head>
 <body>
 <div class="container">	
-	<h1 align="center">SERVICE</h1>
+	<h1 align="center" id="color" >Thank you</h1>
 	 <div class="row" >
-		  <div class="col-md-7">
-		   <img src="/stringart/resources/images/tree.jpg" class="img-rounded" alt="tree"  width="550" height="650">
+		   <div class="col-md-5">
 		  </div>
-		<div class="col-md-4">
-		 	  <h3>
-				If we can improve our art gallery, please, let us know in any comfortable for you way. 
-				Your opinion is very important for us. 
-			  </h3>
-			  <h3>
-			  But firstly...
+		<div class="col-md-7">
+		 	  <h3 id="color">
+				Your order is waiting for moderation.
 			  </h3>
 			   <div class="mbr-section-btn align-center">
 	                
 		                <ul class="row" data-app-modern-menu="true"  style="list-style-type:none">
 			          		<li class="mr-4">
-			                    <form method="post" action="to_authentication">
-					               	<button class="btn btn-md  btn-outline-primary btn-info-outline display-4" value="to_authentication">
-					               		Log In
+			                    <form method="post" action="to_main_page">
+					               	<button class="btn btn-md  btn-outline-primary btn-info-outline display-4" value="to_main_page">
+					               		To main page
 					               	</button>
 								</form>
 			                </li>
 		                
-							<li>
-								 <form method="post" action="to_registration">
-					               	<button class="btn btn-md btn-outline-danger btn-secondary-outline display-4" value="to_registration">
-					               		Sign Up
-					               	</button>
-								</form>
-							</li>
-							
-							<li>
-								<form method="post" action="to_main_page">
-									<button class="btn btn-md  btn-outline-success btn-info-outline display-4" value="to_main_page">
-										To main page
-									</button>
-								</form>
-							</li>
 						</ul>
 	                </div>
 		</div>	

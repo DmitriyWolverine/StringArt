@@ -3,6 +3,8 @@ package by.sda.stringart.web.controller.commands;
 import static by.sda.stringart.web.controller.util.JspPagesNames.*;
 import static by.sda.stringart.web.controller.util.JspParametresPool.*;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -10,6 +12,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import by.sda.stringart.bean.users.User;
 import by.sda.stringart.service.ArtistService;
@@ -31,6 +35,11 @@ public class CommonController {
 		this.userService = userService;
 		this.artistService = artistService;
 	}
+	
+	private static HttpSession getSession() {
+	    ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+	    return attr.getRequest().getSession(true);
+	}
 
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
 	public String authentication(ModelMap model, @RequestParam String login,  @RequestParam String password) {
@@ -38,8 +47,10 @@ public class CommonController {
 	    	model.addAttribute(USER_LOGIN,login);
 	    	model.addAttribute(ARTISTS_LIST,artistService.getAll());
 	    	if(userService.readByLogin(login).getRole() == 2) {
+	    		getSession().setAttribute(USER_TYPE_ADMIN, userService.readByLogin(login) );
 	    		return ADMIN_PAGE;
 	    	}
+	    	getSession().setAttribute(USER_TYPE_SIMPLEUSER, userService.readByLogin(login) );
 	    	return USER_PAGE;
 	    }
 		model.addAttribute(USER_LOGIN,login);
@@ -71,8 +82,15 @@ public class CommonController {
 		 return SERVICE_PAGE;
 	}
 	
+	@RequestMapping(value="/to_main_page", method = RequestMethod.POST)
+	public String toMainPage() {
+		return FRONT_PAGE;
+	}
+	
 	@RequestMapping(value="/log_out", method = RequestMethod.POST)
 	public String logOut() {
+		getSession().removeAttribute(USER_TYPE_ADMIN);
+		getSession().removeAttribute(USER_TYPE_SIMPLEUSER);
 		return FRONT_PAGE;
 	}
 	
@@ -86,6 +104,7 @@ public class CommonController {
 		userService.create(login, email, password);
 		model.addAttribute(USER_LOGIN,login);
     	model.addAttribute(ARTISTS_LIST,artistService.getAll());
+    	getSession().setAttribute(USER_TYPE_SIMPLEUSER, userService.readByLogin(login) );
 		return USER_PAGE;
 	}
 }

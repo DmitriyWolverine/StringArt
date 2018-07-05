@@ -7,43 +7,52 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="<c:url value="/resources/css/user.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/userOrders.css" />" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
 	
-	<title>Admin page</title>
-
+	<title>User Order page</title>
 	
 </head>
 <body>
 <div class="container">	
  	<div class="row">
  	 	<div class="col-sm-10">
-		<h1 align="center">Hello, ${login}!</h1>
+		<h1 align="center">Welcome to your order, ${artistName}!</h1>
 			<table class="table">
 			    <thead>
 			      <tr>
-			        <th>Firstname</th>
-			        <th>Lastname</th>
-			        <th>Birthday</th>
-			        <th>Action</th>
+			      	<th>Picture</th>
+			        <th>Name</th>
+			        <th>Status</th>
+			        <th>Date</th>
+			        <th>Price</th>
 			      </tr>
 			    </thead>
 			    <tbody>
-				    <c:forEach items="${artistList}" var="item">
+				    <c:forEach items="${ordersList}" var="item">
 				      <tr>
+				      	<td><img src="${item.getPicture().getImage()}" width=300 /></td>
 				        <td><c:out value="${item.getName()}"/></td>
-				        <td><c:out value="${item.getSurname()}"/></td>
-				        <td><c:out value="${item.getBirthdayNoTime()}"/></td>
-				        <td>
-					        <form method="post" action="to_advanced_artist_exhibition">
-				               	<button class="btn btn-link btn-secondary-outline display-4"  value="to_advanced_artist_exhibition">
-				               		Watch pictures
-				               	</button>
-				               	<input type="hidden" name="artistId" value="${item.getId()}"/>
-							</form>
-				        </td>	
+						<td>
+						<c:choose>
+						    <c:when test="${item.getStatus()=='1'}">
+						      		 accepted
+						        <br />
+						    </c:when>  
+						     <c:when test="${item.getStatus()=='2'}">
+						     		denied
+						        <br />
+						    </c:when>  
+						    <c:otherwise>
+						        	not accepted yet
+						        <br />
+						    </c:otherwise>
+						</c:choose>	
+						</td>
+				        <td><c:out value="${item.getAppliedDate()}"/></td>
+				        <td><c:out value="${item.getPrice()}"/></td>
 				      </tr>
 			      	</c:forEach> 
 			    </tbody>
@@ -55,6 +64,14 @@
 			   <form method="post" action="log_out">
 			   		<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="log_out">
 							Log Out
+					</button>
+			 	
+				</form>
+			</div>
+			<div class="col-sm-2">
+			   <form method="post" action="to_user_page">
+			   		<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="to_user_page">
+							Back
 					</button>
 			 	
 				</form>

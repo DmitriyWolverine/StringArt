@@ -17,52 +17,58 @@
   	
 </head>
 <body>
+<div class="container-fluid">
  	<div class="row">
  	 	<div class="col-sm-11">
 		<h1 align="center">Create your order</h1>
-			<table class="table">
-			    <thead>
-			      <tr>
-			        <th>Photo</th>
-			        <th>Picture</th>
-			        <th>Name</th>
-			        <th>Price</th>
-			        <th>Order</th>
-			      </tr>
-			    </thead>
-			    <tbody>
+			<form method="post" action="create_order">
+				<table class="table">
+				    <thead>
 				      <tr>
-				     	<td><img src="${picture.getPhoto()}" width=300 height = 300/></td>
-				     	<td><img src="${picture.getImage()}" width=250 height = 300/></td>
-				        <td>
-					        <div class="dropdown">
-							  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose size
-							  	<span class="caret"></span>
-							  </button>
-							  <ul class="dropdown-menu">
-								  <c:forEach items="${standartList}" var="standart">
-								        <li>${standart.getName()}</li>
-							      </c:forEach> 
-							  </ul>
-							</div>
-						</td>
-				        <td>
-				       	  <div class="col-xs-2">
-						    <input class="form-control" id="ex1" type="text" name="price"  placeholder="Enter you price">
-						  </div>
-						</td>
-				      	<td>
-					        <form method="post" action="to_create_order_page">
-				               	<button class="btn btn-link btn-secondary-outline display-4" type="hidden"  value="create_order">
-				               		Submit
-				               	</button>
-							</form>
-				        </td>	
+				        <th>Photo</th>
+				        <th>Picture</th>
+				        <th>Order Name</th>
+				        <th>Size</th>
+				        <th>Price</th>
+				        <th>Order</th>
 				      </tr>
-			 
-			    </tbody>
-			  </table>
-		
+				    </thead>
+				    <tbody>
+					      <tr>
+					     	<td><img src="${picture.getPhoto()}" height = 300/></td>
+					     	<td>
+					     		<img src="${picture.getImage()}" height = 300/>
+					     	</td>
+					     	<td>
+					     	<div class="col-xs-2">
+							    <input type="text" class="form-control" id="ex1"name="title"  placeholder="Enter some name">
+							  </div>
+							  </td>
+					        <td>
+					   					
+					        <select name="size" >
+								<option disabled>Choose standard</option>
+								<c:forEach items="${standartList}" var="standart">
+										<option  value="${standart.getId()}" > ${standart.getName()} </option>
+								</c:forEach>
+							</select>
+					        
+							</td>
+					        <td>
+					       	  <div class="col-xs-2">
+							    <input type="text" class="form-control" id="ex1" name="price"  placeholder="Enter you price">
+							  </div>
+							</td>
+					      	<td>
+						    		<input type="hidden" name="pictureId" value="${picture.getId()}"/>
+					               	<button class="btn btn-link btn-secondary-outline display-4" type="hidden"  value="create_order">
+					               		Submit
+					               	</button>
+					        </td>	
+					      </tr>
+				    </tbody>
+				  </table>
+			</form>
 		</div>
 		
 		  <div class="col-sm-1">
@@ -74,12 +80,14 @@
 				</form>
 			</div>
 		</div>
+</div>		
 	
-	
-	
-	<div id="footer" >
-		  <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
-	</div>	
+	<div class="container">
+		<div id="footer" >
+			  <p> © Copyright 2018 anthony.shad. All rights reserved.</p> 
+		</div>
+	</div>
+
 	
 	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 

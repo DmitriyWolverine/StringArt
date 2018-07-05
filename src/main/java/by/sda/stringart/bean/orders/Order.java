@@ -2,7 +2,9 @@ package by.sda.stringart.bean.orders;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -15,13 +17,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import by.sda.stringart.bean.pictures.Picture;
 import by.sda.stringart.bean.users.User;
 
-
 @Component
+@Scope("prototype")
 @Entity
 @Table(name = "orders")
 public class Order implements Serializable{
@@ -77,6 +80,14 @@ public class Order implements Serializable{
 		this.status = status;
 	}
 	
+	public Order(String name,  User user, Picture picture,BigDecimal price) {
+		super();
+		this.name = name;
+		this.price = price;
+		this.user = user;
+		this.picture = picture;
+	}
+
 	public Order(String name, BigDecimal price){
 		super();
 		this.name = name;
@@ -102,7 +113,11 @@ public class Order implements Serializable{
 	public Date getAppliedDate() {
 		return appliedDate;
 	}
-
+	public String getAppliedDateNoTime() {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH);
+		return dateFormat.format(appliedDate);
+	}
+	
 	public void setAppliedDate(Date appliedDate) {
 		this.appliedDate = appliedDate;
 	}
