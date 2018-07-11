@@ -73,7 +73,11 @@ public class UserDaoHibernateImpl implements UserDao{
 
 	@Override
 	public List<Order> ordersList(User entity) {
-		return read(entity.getId()).getOrders();
+		Session session = SessionFactoryManager.getSessionFactory().openSession();
+		User user = read(entity.getId());
+		List<Order> orders = user.getOrders();
+		session.close();
+		return orders;
 	}
 
 

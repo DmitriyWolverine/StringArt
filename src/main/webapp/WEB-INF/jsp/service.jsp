@@ -51,9 +51,9 @@
 							</li>
 							<li>
 								<form method="post" action="to_main_page">
-						               	<button class="btn btn-md  btn-success btn-secondary-outline display-4" value="to_main_page">
-						               		To main page
-						               	</button>
+						            <button class="btn btn-md  btn-success btn-secondary-outline display-4" value="to_main_page">
+						               	To main page
+						            </button>
 								</form>
 							</li>
 						</ul>

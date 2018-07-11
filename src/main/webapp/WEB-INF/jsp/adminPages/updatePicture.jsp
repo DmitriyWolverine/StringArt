@@ -8,7 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<link href="<c:url value="/resources/css/news.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/ordersManager.css" />" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
 		crossorigin="anonymous">
@@ -61,7 +61,7 @@
 							</td>
 					      	<td>
 						    		<input type="hidden" name="pictureId" value="${picture.getId()}"/>
-					               	<button class="btn btn-link btn-secondary-outline display-4" type="hidden"  value="create_order">
+					               	<button class="btn btn-link btn-secondary-outline display-4" type="hidden"  value="admin/create_order">
 					               		Submit
 					               	</button>
 					        </td>	
@@ -80,18 +80,11 @@
 			</div>
 		</div>
 		
-		<div class="col-sm-5">
-	            <ul class="row"  data-app-modern-menu="true" style="list-style-type:none">
-	          		<li class="mr-4">
-	                    <form method="post" action="to_user_page">
-							<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="to_user_page">
-								Back
-							</button>
-						</form>
-	                </li>
-				</ul>
-		</div>	
-		
+		<form method="post" action="to_admin_page">
+			<button class="btn btn-md btn-danger btn-secondary-outline display-4" value="admin/to_admin_page">
+				Back
+			</button>
+		</form>
 </div>		
 	
 	<div class="container">

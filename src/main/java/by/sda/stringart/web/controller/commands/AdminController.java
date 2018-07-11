@@ -23,6 +23,7 @@ import by.sda.stringart.service.StandartService;
 import by.sda.stringart.service.UserService;
 
 @Controller
+@RequestMapping(value = "/admin", method = RequestMethod.POST)
 public class AdminController {
 	@Autowired
 	@Qualifier("artistServiceImpl")
@@ -117,6 +118,13 @@ public class AdminController {
 		orderService.changeStatus(orderService.read(orderId),"2");
 		model.addAttribute(ORDERS_LIST, orderService.getAll());
 		return ORDERS_MANAGEMENT_PAGE;
+	}
+	
+	@RequestMapping(value="/log_out", method = RequestMethod.POST)
+	public String logOut() {
+		getSession().removeAttribute(USER_TYPE_ADMIN);
+		getSession().removeAttribute(USER_TYPE_SIMPLEUSER);
+		return FRONT_PAGE;
 	}
 }
 
